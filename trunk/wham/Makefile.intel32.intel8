@@ -1,0 +1,53 @@
+.DEFAULT: .f .for .c .C .cpp .cc
+.SUFFIXES: .f .for .c .C .cpp .cc
+
+O = .
+
+F77 = ifort
+CC = icc
+CCC = icpc 
+
+CFLAGS = -O3 -tpp7 -align -Zp8 -axW -unroll -Wno-deprecated  \
+	 -openmp -ipo -xP -I/usr/include/python2.2 -cxxlib-icc
+
+FFLAGS = -O3 -WB -tpp7 -align -Zp8 -axW -unroll -openmp -ipo -xP -cxxlib-icc
+
+LIBS =  -L/opt/intel/cc/9.0/lib \
+	-L/opt/intel/fc/9.0/lib \
+	-lsvml -limf -lifcore -lguide
+
+Link = icpc $(CFLAGS) -shared
+
+EXENAME = whamit.so  
+
+OBJS =  $(O)/wham.o  $(O)/whamit.o  $(O)/cputime.o  $(O)/header.o
+
+$(EXENAME) : $(OBJS) 
+	$(Link) -o $(EXENAME) $(OBJS) $(LIBS)
+	chmod -x $(EXENAME)
+
+$(O)/%.o: %.c
+	cd $(O) ; $(CC)  $(CFLAGS) -c $<
+$(O)/%.o: %.cc
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.cpp
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.C
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.f
+	cd $(O) ; $(F77) $(FFLAGS) -c $<
+$(O)/%.o: %.for
+	cd $(O) ; $(F77) $(FFLAGS) -c $<
+
+clean:
+	rm -f core *.o *.so
+dat: 
+	rm -f *.dat
+backup:
+	rm -f *~
+clobber:
+	rm -f $(EXENAME).exe
+cleanall:
+	rm -f *.o *.dat *~ *.exe *.exe.* $(EXENAME) 
+
+.PRECIOUS: %_wrap.C %.C %.c %.f %.h $(O)/%.o
