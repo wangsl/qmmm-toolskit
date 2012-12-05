@@ -1,0 +1,5 @@
+PDB-Input sphere-30.pdb
+ZPDB-Output SET79-30.zpdb
+N-Terminal-Resid 1 251
+C-Terminal-Resid 250 260
+Amber-Tinker-Table amber2tinker_hmt.table
