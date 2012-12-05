@@ -1,0 +1,78 @@
+.DEFAULT: .f .for .c .C .cpp .cc
+.SUFFIXES: .f .for .c .C .cpp .cc
+
+SRC = .
+O = .
+
+F77 = xlf_r
+F90 = xlf90_r
+CC = xlc_r
+CCC = xlc++_r
+
+FPP = /opt/ibmcmp/xlf/9.1/exe/cpp
+
+FFLAGS = -qfixed=132 -qcharlen=80 -qdpc -q64 -O3 -qarch=ppc970 -qtune=ppc970 \
+	-qcache=auto -qstrict -qmaxmem=-1 -qhot=simd -qphsinfo -qthreaded \
+	-qspill=10000 -qextname 
+
+F90FLAGS = $(FFLAGS) -qsuffix=f=f90
+
+CFLAGS = -q64 -O3 -qarch=ppc970 -qtune=ppc970 -qcache=auto -qstrict -qmaxmem=-1 \
+	-qhot=simd -qphsinfo -qthreaded  -qspill=10000 \
+	-I/home/sw77/local/PPC64/NetCDF-3.6.2/include
+
+DEPCFLAGS = -I/home/sw77/local/PPC64/NetCDF-3.6.2/include
+
+Link = $(CCC) $(CFLAGS)
+
+LIBS = 	-L/home/sw77/local/PPC64/NetCDF-3.6.2/lib -lnetcdf_c++ -lnetcdf \
+       -L/opt/ibmcmp/xlf/9.1/lib64 -lxlf90_r -lbsd-compat -lg -lc -lm 
+
+#        -L/opt/ibmcmp/lib64 -libmc++
+
+EXENAME = nc.test
+
+OBJS =  $(O)/main.o  $(O)/die.o  $(O)/out.o  $(O)/indent.o  $(O)/NetCDF.o \
+	$(O)/NetCDFio.o
+
+$(EXENAME) : $(OBJS) 
+	$(Link) -o $(EXENAME) $(OBJS) $(LIBS)
+
+$(O)/%.o: %.c
+	cd $(O) ; $(CC)  $(CFLAGS) -c $<
+$(O)/%.o: %.cc
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.cpp
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.C
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: $(SRC)/%.F
+	$(FPP) -I/$(FPPINCLUDE) $*.F $*.f
+	cd $(O); $(F77) $(FFLAGS) -c $(SRC)/$*.f
+	/bin/rm $*.f
+
+$(O)/%.o: %.for
+	cd $(O) ; $(F77) $(FFLAGS) -c $<
+$(O)/%.o: %.f90
+	cd $(O) ; $(F90) $(F90FLAGS) -c $<
+
+%io.C: %.h
+	perl io.pl $<
+
+clean:
+	rm -f core *.o
+dat: 
+	rm -f *.dat
+backup:
+	rm -f *~
+clobber:
+	rm -f $(EXENAME).exe
+cleanall:
+	rm -f *.o *.dat *~ *.exe *.exe.* $(EXENAME) *.mod  depend *io.C
+
+depend :
+	g++ $(DEPCFLAGS) -MM *.[cC] | perl dep.pl > $@
+
+.PRECIOUS: %io.C %.C %.c %.f %.h $(O)/%.o
+
+include depend
