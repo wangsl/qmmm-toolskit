@@ -1,0 +1,60 @@
+
+# The integer number in this Makefile is I4, 
+# please uncomment this line in WHAM.py
+# from numpy import int32 as intpy
+
+.DEFAULT: .f .for .c .C .cpp .cc
+.SUFFIXES: .f .for .c .C .cpp .cc
+
+O = .
+
+F77 = ifort
+CC = icc
+CCC = icpc 
+
+CFLAGS = -O3 -fPIC -align -Zp8 -axW -unroll -Wno-deprecated -openmp -ip \
+	-I/usr/include/python2.3  \
+	-I$(HOME)/local/Python/lib64/python2.3/site-packages/numpy/core/include 
+
+FFLAGS =  -O3 -fPIC -WB -align -Zp8 -axW -unroll -openmp -ip
+
+LIBS =  -L/usr/local/intel/cce/10.0.023/lib \
+	-L/usr/local/intel/fce/10.0.023/lib \
+	-L/usr/local/intel/mkl/10.0.1.014/lib/em64t \
+	-lmkl -lsvml -limf -lifcore -lguide -lifport -lstdc++
+
+Link = $(CC) $(CFLAGS)
+
+EXENAME = whamit.so  
+
+OBJS =  $(O)/wham.o  $(O)/whamit.o  $(O)/cputime.o  $(O)/header.o
+
+$(EXENAME) : $(OBJS) 
+	$(Link) -shared -o $(EXENAME) $(OBJS) $(LIBS)
+	chmod -x $(EXENAME)
+
+$(O)/%.o: %.c
+	cd $(O) ; $(CC)  $(CFLAGS) -c $<
+$(O)/%.o: %.cc
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.cpp
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.C
+	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+$(O)/%.o: %.F
+	cd $(O) ; $(F77) $(FFLAGS) -c $<
+$(O)/%.o: %.for
+	cd $(O) ; $(F77) $(FFLAGS) -c $<
+
+clean:
+	rm -f core *.o *.so
+dat: 
+	rm -f *.dat
+backup:
+	rm -f *~
+clobber:
+	rm -f $(EXENAME).exe
+cleanall:
+	rm -f *.o *.dat *~ *.exe *.exe.* $(EXENAME) *.pyc
+
+.PRECIOUS: %_wrap.C %.C %.c %.f %.h $(O)/%.o
