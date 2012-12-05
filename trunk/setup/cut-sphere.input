@@ -1,0 +1,5 @@
+PDB-Input SET79-Amber.pdb
+PDB-Output sphere-30.pdb
+Center-Coordinate 29.311  29.267  31.941
+Sphere-Radius 30.0
+Box-Dimension 85.2212166  62.9545826  60.1530603

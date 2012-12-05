@@ -1,0 +1,1162 @@
+
+# $Id: amber2tinker_hmt.table 4 2012-12-05 04:19:17Z wangsl2001@gmail.com $
+
+# AMBER-ff99
+
+#############
+## Glycine ##
+#############
+GLY      1      N
+GLY      2      CA
+GLY      3      C
+GLY      4      H
+GLY      5      O
+GLY      6      HA2
+GLY      6      HA3
+#############
+## Alanine ##
+#############
+ALA      7      N
+ALA      8      CA
+ALA      9      C
+ALA     10      H
+ALA     11      O
+ALA     12      HA
+ALA     13      CB
+ALA     14      HB1
+ALA     14      HB2
+ALA     14      HB3
+############
+## Valine ##
+############
+VAL     15      N
+VAL     16      CA
+VAL     17      C
+VAL     18      H
+VAL     19      O
+VAL     20      HA
+VAL     21      CB
+VAL     22      HB
+VAL     23      CG1
+VAL     24      1HG1
+VAL     24      2HG1
+VAL     24      3HG1
+VAL     25      CG2
+VAL     26      1HG2
+VAL     26      2HG2
+VAL     26      3HG2
+#############
+## Leucine ##
+#############
+LEU     27      N
+LEU     28      CA
+LEU     29      C
+LEU     30      H
+LEU     31      O
+LEU     32      HA
+LEU     33      CB
+LEU     34      HB2
+LEU     34      HB3
+LEU     35      CG
+LEU     36      HG
+LEU     37      CD1
+LEU     38      1HD1
+LEU     38      2HD1
+LEU     38      3HD1
+LEU     39      CD2
+LEU     40      1HD2
+LEU     40      2HD2
+LEU     40      3HD2
+################
+## Isoleucine ##
+################
+ILE     41      N
+ILE     42      CA
+ILE     43      C
+ILE     44      H
+ILE     45      O
+ILE     46      HA
+ILE     47      CB
+ILE     48      HB
+ILE     49      CG1
+ILE     50      HG1
+ILE     50      2HG1
+ILE     50      3HG1
+ILE     51      CG2
+ILE     52      1HG2
+ILE     52      2HG2
+ILE     52      3HG2
+ILE     53      CD1
+ILE     54      1HD1
+ILE     54      2HD1
+ILE     54      3HD1
+############
+## Serine ##
+############
+SER     55      N
+SER     56      CA
+SER     57      C
+SER     58      H
+SER     59      O
+SER     60      HA
+SER     61      CB
+SER     62      HB2
+SER     62      HB3
+SER     63      OG
+SER     64      HG
+###############
+## Threonine ##
+###############
+THR     65      N
+THR     66      CA
+THR     67      C
+THR     68      H
+THR     69      O
+THR     70      HA
+THR     71      CB
+THR     72      HB
+THR     73      OG1
+THR     74      HG1
+THR     75      CG2
+THR     76      1HG2
+THR     76      2HG2
+THR     76      3HG2
+##############
+## Cysteine ##
+##############
+CYS     77      N
+CYS     78      CA
+CYS     79      C
+CYS     80      H
+CYS     81      O
+CYS     82      HA
+CYS     83      CB
+CYS     84      HB2
+CYS     84      HB3
+CYS     85      SG
+CYS     86      HG
+##############################
+## Cysteine (sulfur bridge) ##
+##############################
+CYD     87      N
+CYD     88      CA
+CYD     89      C
+CYD     90      H
+CYD     91      O
+CYD     92      HA
+CYD     93      CB
+CYD     94      HB2
+CYD     94      HB3
+CYD     95      SG
+#############
+## Proline ##
+#############
+PRO     96      N
+PRO     97      CA
+PRO     98      C
+PRO     99      O
+PRO    100      HA
+PRO    101      CB
+PRO    102      HB2
+PRO    102      HB3
+PRO    103      CG
+PRO    104      HG2
+PRO    104      HG3
+PRO    105      CD
+PRO    106      HD2
+PRO    106      HD3
+###################
+## Phenylalanine ##
+###################
+PHE    107      N
+PHE    108      CA
+PHE    109      C
+PHE    110      H
+PHE    111      O
+PHE    112      HA
+PHE    113      CB
+PHE    114      HB2
+PHE    114      HB3
+PHE    115      CG
+PHE    116      CD1
+PHE    116      CD2
+PHE    117      HD1
+PHE    117      HD2
+PHE    118      CE1
+PHE    118      CE2
+PHE    119      HE1
+PHE    119      HE2
+PHE    120      CZ
+PHE    121      HZ
+##############
+## Tyrosine ##
+##############
+TYR    122      N
+TYR    123      CA
+TYR    124      C
+TYR    125      H
+TYR    126      O
+TYR    127      HA
+TYR    128      CB
+TYR    129      HB2
+TYR    129      HB3
+TYR    130      CG
+TYR    131      CD1
+TYR    131      CD2
+TYR    132      HD1
+TYR    132      HD2
+TYR    133      CE1
+TYR    133      CE2
+TYR    134      HE1
+TYR    134      HE2
+TYR    135      CZ
+TYR    136      OH
+TYR    137      HH
+################
+## Tryptophan ##
+################
+TRP    138      N
+TRP    139      CA
+TRP    140      C
+TRP    141      H
+TRP    142      O
+TRP    143      HA
+TRP    144      CB
+TRP    145      HB2
+TRP    145      HB3
+TRP    146      CG
+TRP    147      CD1
+TRP    148      HD1
+TRP    149      CD2
+TRP    150      NE1
+TRP    151      HE1
+TRP    152      CE2
+TRP    153      CE3
+TRP    154      HE3
+TRP    155      CZ2
+TRP    156      HZ2
+TRP    157      CZ3
+TRP    158      HZ3
+TRP    159      CH2
+TRP    160      HH2
+###################################
+## Histidine (double protonated) ##
+###################################
+HIS    161      N
+HIS    162      CA
+HIS    163      C
+HIS    164      H
+HIS    165      O
+HIS    166      HA
+HIS    167      CB
+HIS    168      HB2
+HIS    168      HB3
+HIS    169      CG
+HIS    170      ND1
+HIS    171      HD1
+HIS    172      CD2
+HIS    173      HD2
+HIS    174      CE1
+HIS    175      HE1
+HIS    176      NE2
+HIS    177      HE2
+##################################
+## Histidine (delta protonated) ##
+##################################
+HID    178      N
+HID    179      CA
+HID    180      C
+HID    181      H
+HID    182      O
+HID    183      HA
+HID    184      CB
+HID    185      HB2
+HID    185      HB3
+HID    186      CG
+HID    187      ND1
+HID    188      HD1
+HID    189      CD2
+HID    190      HD2
+HID    191      CE1
+HID    192      HE1
+HID    193      NE2
+####################################
+## Histidine (epsilon protonated) ##
+####################################
+HIE    194      N
+HIE    195      CA
+HIE    196      C
+HIE    197      H
+HIE    198      O
+HIE    199      HA
+HIE    200      CB
+HIE    201      HB2
+HIE    201      HB3
+HIE    202      CG
+HIE    203      ND1
+HIE    204      CD2
+HIE    205      HD2
+HIE    206      CE1
+HIE    207      HE1
+HIE    208      NE2
+HIE    209      HE2
+###################
+## Aspartic Acid ##
+###################
+ASP    210      N
+ASP    211      CA
+ASP    212      C
+ASP    213      H
+ASP    214      O
+ASP    215      HA
+ASP    216      CB
+ASP    217      HB2
+ASP    217      HB3
+ASP    218      CG
+ASP    219      OD1
+ASP    219      OD2
+################
+## Asparagine ##
+################
+ASN    220      N
+ASN    221      CA
+ASN    222      C
+ASN    223      H
+ASN    224      O
+ASN    225      HA
+ASN    226      CB
+ASN    227      HB2
+ASN    227      HB3
+ASN    228      CG
+ASN    229      OD1
+ASN    230      ND2
+ASN    231      1HD2
+ASN    231      2HD2
+###################
+## Glutamic Acid ##
+###################
+GLU    232      N
+GLU    233      CA
+GLU    234      C
+GLU    235      H
+GLU    236      O
+GLU    237      HA
+GLU    238      CB
+GLU    239      HB2
+GLU    239      HB3
+GLU    240      CG
+GLU    241      HG2
+GLU    241      HG3
+GLU    242      CD
+GLU    243      OE1
+GLU    243      OE2
+###############
+## Glutamine ##
+###############
+GLN    244      N
+GLN    245      CA
+GLN    246      C
+GLN    247      H
+GLN    248      O
+GLN    249      HA
+GLN    250      CB
+GLN    251      HB2
+GLN    251      HB3
+GLN    252      CG
+GLN    253      HG2
+GLN    253      HG3
+GLN    254      CD
+GLN    255      OE1
+GLN    256      NE2
+GLN    257      1HE2
+GLN    257      2HE2
+################
+## Methionine ##
+################
+MET    258      N
+MET    259      CA
+MET    260      C
+MET    261      H
+MET    262      O
+MET    263      HA
+MET    264      CB
+MET    265      HB2
+MET    265      HB3
+MET    266      CG
+MET    267      HG2
+MET    267      HG3
+MET    268      SD
+MET    269      CE
+MET    270      HE1
+MET    270      HE2
+MET    270      HE3
+############
+## Lysine ##
+############
+LYS    271      N
+LYS    272      CA
+LYS    273      C
+LYS    274      H
+LYS    275      O
+LYS    276      HA
+LYS    277      CB
+LYS    278      HB2
+LYS    278      HB3
+LYS    279      CG
+LYS    280      HG2
+LYS    280      HG3
+LYS    281      CD
+LYS    282      HD2
+LYS    282      HD3
+LYS    283      CE
+LYS    284      HE2
+LYS    284      HE3
+LYS    285      NZ
+LYS    286      HZ1
+LYS    286      HZ2
+LYS    286      HZ3
+##############
+## Arginine ##
+##############
+ARG    287      N
+ARG    288      CA
+ARG    289      C
+ARG    290      H
+ARG    291      O
+ARG    292      HA
+ARG    293      CB
+ARG    294      HB2
+ARG    294      HB3
+ARG    295      CG
+ARG    296      HG2
+ARG    296      HG3
+ARG    297      CD
+ARG    298      HD2
+ARG    298      HD3
+ARG    299      NE
+ARG    300      HE
+ARG    301      CZ
+ARG    302      NH1
+ARG    302      NH2
+ARG    303      1HH1
+ARG    303      2HH1
+ARG    303      1HH2
+ARG    303      2HH2
+###############
+## Ornithine ##
+###############
+ORN    304      N
+ORN    305      CA
+ORN    306      C
+ORN    307      H
+ORN    308      O
+ORN    309      HA
+ORN    310      CB
+ORN    311      HB
+ORN    312      CG
+ORN    313      HG
+ORN    314      CD
+ORN    315      HD
+ORN    316      NE
+ORN    317      HE
+########################
+## Methylated Alanine ##
+########################
+MALA   318      N
+MALA   319      CA
+MALA   320      C
+MALA   321      H
+MALA   322      O
+MALA   323      CB1
+MALA   324      1HB1
+MALA   324      2HB1
+MALA   324      3HB1
+MALA   323      CB2
+MALA   324      1HB2
+MALA   324      2HB2
+MALA   324      3HB2
+##############
+## ???????? ##
+##############
+PYR    325      N
+PYR    326      CA
+PYR    327      C
+PYR    328      H
+PYR    329      O
+PYR    330      HA
+PYR    331      CB
+PYR    332      HB
+PYR    333      CG
+PYR    334      HG
+PYR    335      CD
+PYR    336      OE
+##############
+## ???????? ##
+##############
+FOR    337      C
+FOR    338      H
+FOR    339      O
+##############
+## ???????? ##
+##############
+ACE    340      CA
+ACE    341      HA
+ACE    342      C
+ACE    343      O
+##############
+## ???????? ##
+##############
+CAM    344      N
+CAM    345      H
+##############
+## ???????? ##
+##############
+NME    346      N
+NME    347      H
+NME    348      C
+NME    349      HC
+####################
+## N-term Glycine ##
+####################
+NGLY   350      N
+NGLY   351      CA
+NGLY   352      C
+NGLY   353      H
+NGLY   353      H1
+NGLY   353      H2
+NGLY   353      H3
+NGLY   354      O
+NGLY   355      HA2
+NGLY   355      HA3
+####################
+## N-term Alanine ##
+####################
+NALA   356      N
+NALA   357      CA
+NALA   358      C
+NALA   359      H
+NALA   359      H1
+NALA   359      H2
+NALA   359      H3
+NALA   360      O
+NALA   361      HA
+###################
+## N-term Valine ##
+###################
+NVAL   362      N
+NVAL   363      CA
+NVAL   364      C
+NVAL   365      H
+NVAL   365      H1
+NVAL   365      H2
+NVAL   365      H3
+NVAL   366      O
+NVAL   367      HA
+####################
+## N-term Leucine ##
+####################
+NLEU   368      N
+NLEU   369      CA
+NLEU   370      C
+NLEU   371      H
+NLEU   371      H1
+NLEU   371      H2
+NLEU   371      H3
+NLEU   372      O
+NLEU   373      HA
+#######################
+## N-term Isoleucine ##
+#######################
+NILE   374      N
+NILE   375      CA
+NILE   376      C
+NILE   377      H
+NILE   377      H1
+NILE   377      H2
+NILE   377      H3
+NILE   378      O
+NILE   379      HA
+###################
+## N-term Serine ##
+###################
+NSER   380      N
+NSER   381      CA
+NSER   382      C
+NSER   383      H
+NSER   383      H1
+NSER   383      H2
+NSER   383      H3
+NSER   384      O
+NSER   385      HA
+######################
+## N-term Threonine ##
+######################
+NTHR   386      N
+NTHR   387      CA
+NTHR   388      C
+NTHR   389      H
+NTHR   389      H1
+NTHR   389      H2
+NTHR   389      H3
+NTHR   390      O
+NTHR   391      HA
+#####################
+## N-term Cysteine ##
+#####################
+NCYS   392      N
+NCYS   393      CA
+NCYS   394      C
+NCYS   395      H
+NCYS   395      H1
+NCYS   395      H2
+NCYS   395      H3
+NCYS   396      O
+NCYS   397      HA
+#####################################
+## N-term Cysteine (sulfur bridge) ##
+#####################################
+NCYD   398      N
+NCYD   399      CA
+NCYD   400      C
+NCYD   401      H
+NCYD   401      H1
+NCYD   401      H2
+NCYD   401      H3
+NCYD   402      O
+NCYD   403      HA
+####################
+## N-term Proline ##
+####################
+NPRO   404      N
+NPRO   405      CA
+NPRO   406      C
+NPRO   407      H
+NPRO   407      H1
+NPRO   407      H2
+NPRO   407      H3
+NPRO   408      O
+NPRO   409      HA
+NPRO   410      CD
+NPRO   411      HD2
+NPRO   411      HD3
+##########################
+## N-term Phenylalanine ##
+##########################
+NPHE   412      N
+NPHE   413      CA
+NPHE   414      C
+NPHE   415      H
+NPHE   415      H1
+NPHE   415      H2
+NPHE   415      H3
+NPHE   416      O
+NPHE   417      HA
+#####################
+## N-term Tyrosine ##
+#####################
+NTYR   418      N
+NTYR   419      CA
+NTYR   420      C
+NTYR   421      H
+NTYR   421      H1
+NTYR   421      H2
+NTYR   421      H3
+NTYR   422      O
+NTYR   423      HA
+#######################
+## N-term Tryptophan ##
+#######################
+NTRP   424      N
+NTRP   425      CA
+NTRP   426      C
+NTRP   427      H
+NTRP   427      H1
+NTRP   427      H2
+NTRP   427      H3
+NTRP   428      O
+NTRP   429      HA
+##########################################
+## N-term Histidine (double protonated) ##
+##########################################
+NHIS   430      N
+NHIS   431      CA
+NHIS   432      C
+NHIS   433      H
+NHIS   433      H1
+NHIS   433      H2
+NHIS   433      H3
+NHIS   434      O
+NHIS   435      HA
+#########################################
+## N-term Histidine (delta protonated) ##
+#########################################
+NHID   436      N
+NHID   437      CA
+NHID   438      C
+NHID   439      H
+NHID   439      H1
+NHID   439      H2
+NHID   439      H3
+NHID   440      O
+NHID   441      HA
+###########################################
+## N-term Histidine (epsilon protonated) ##
+###########################################
+NHIE   442      N
+NHIE   443      CA
+NHIE   444      C
+NHIE   445      H
+NHIE   445      H1
+NHIE   445      H2
+NHIE   445      H3
+NHIE   446      O
+NHIE   447      HA
+##########################
+## N-term Aspartic Acid ##
+##########################
+NASP   448      N
+NASP   449      CA
+NASP   450      C
+NASP   451      H
+NASP   451      H1
+NASP   451      H2
+NASP   451      H3
+NASP   452      O
+NASP   453      HA
+#######################
+## N-term Asparagine ##
+#######################
+NASN   454      N
+NASN   455      CA
+NASN   456      C
+NASN   457      H
+NASN   457      H1
+NASN   457      H2
+NASN   457      H3
+NASN   458      O
+NASN   459      HA
+##########################
+## N-term Glutamic Acid ##
+########################## 
+NGLU   460      N
+NGLU   461      CA
+NGLU   462      C
+NGLU   463      H
+NGLU   463      H1
+NGLU   463      H2
+NGLU   463      H3
+NGLU   464      O
+NGLU   465      HA
+######################
+## N-term Glutamine ##
+######################
+NGLN   466      N
+NGLN   467      CA
+NGLN   468      C
+NGLN   469      H
+NGLN   469      H1
+NGLN   469      H2
+NGLN   469      H3
+NGLN   470      O
+NGLN   471      HA
+#######################
+## N-term Methionine ##
+#######################
+NMET   472      N
+NMET   473      CA
+NMET   474      C
+NMET   475      H
+NMET   475      H1
+NMET   475      H2
+NMET   475      H3
+NMET   476      O
+NMET   477      HA
+###################
+## N-term Lysine ##
+###################
+NLYS   478      N
+NLYS   479      CA
+NLYS   480      C
+NLYS   481      H
+NLYS   481      H1
+NLYS   481      H2
+NLYS   481      H3
+NLYS   482      O
+NLYS   483      HA
+#####################
+## N-term Arginine ##
+#####################
+NARG   484      N
+NARG   485      CA
+NARG   486      C
+NARG   487      H
+NARG   487      H1
+NARG   487      H2
+NARG   487      H3
+NARG   488      O
+NARG   489      HA
+######################
+## N-term Ornithine ##
+######################
+NORN   490      N
+NORN   491      CA
+NORN   492      C
+NORN   493      H
+NORN   493      H1
+NORN   493      H2
+NORN   493      H3
+NORN   494      O
+NORN   495      HA
+#####################
+## N-term ???????? ##
+#####################
+NAIB   496      N
+NAIB   497      CA
+NAIB   498      C
+NAIB   499      H
+NAIB   499      H1
+NAIB   499      H2
+NAIB   499      H3
+NAIB   500      O
+####################
+## C-term Glycine ##
+####################
+CGLY   501      N
+CGLY   502      CA
+CGLY   503      C
+CGLY   504      H
+CGLY   505      O
+CGLY   505      OXT
+CGLY   506      HA
+####################
+## C-term Alanine ##
+####################
+CALA   507      N
+CALA   508      CA
+CALA   509      C
+CALA   510      H
+CALA   511      O
+CALA   511      OXT
+CALA   512      HA
+###################
+## C-term Valine ##
+###################
+CVAL   513      N
+CVAL   514      CA
+CVAL   515      C
+CVAL   516      H
+CVAL   517      O
+CVAL   517      OXT
+CVAL   518      HA
+####################
+## C-term Leucine ##
+####################
+CLEU   519      N
+CLEU   520      CA
+CLEU   521      C
+CLEU   522      H
+CLEU   523      O
+CLEU   523      OXT
+CLEU   524      HA
+#######################
+## C-term Isoleucine ##
+#######################
+CILE   525      N
+CILE   526      CA
+CILE   527      C
+CILE   528      H
+CILE   529      O
+CILE   529      OXT
+CILE   530      HA
+###################
+## C-term Serine ##
+###################
+CSER   531      N
+CSER   532      CA
+CSER   533      C
+CSER   534      H
+CSER   535      O
+CSER   535      OXT
+CSER   536      HA
+######################
+## C-term Threonine ##
+######################
+CTHR   537      N
+CTHR   538      CA
+CTHR   539      C
+CTHR   540      H
+CTHR   541      O
+CTHR   541      OXT
+CTHR   542      HA
+#####################
+## C-term Cysteine ##
+#####################
+CCYS   543      N
+CCYS   544      CA
+CCYS   545      C
+CCYS   546      H
+CCYS   547      O
+CCYS   547      OXT
+CCYS   548      HA
+#####################################
+## C-term Cysteine (sulfur bridge) ##
+#####################################
+CCYD   549      N
+CCYD   550      CA
+CCYD   551      C
+CCYD   552      H
+CCYD   553      O
+CCYD   553      OXT
+CCYD   554      HA
+####################
+## C-term Proline ##
+####################
+CPRO   555      N
+CPRO   556      CA
+CPRO   557      C
+CPRO   558      O
+CPRO   558      OXT
+CPRO   559      HA
+##########################
+## C-term Phenylalanine ##
+##########################
+CPHE   560      N
+CPHE   561      CA
+CPHE   562      C
+CPHE   563      H
+CPHE   564      O
+CPHE   564      OXT
+CPHE   565      HA
+#####################
+## C-term Tyrosine ##
+#####################
+CTYR   566      N
+CTYR   567      CA
+CTYR   568      C
+CTYR   569      H
+CTYR   570      O
+CTYR   570      OXT
+CTYR   571      HA
+#######################
+## C-term Tryptophan ##
+#######################
+CTRP   572      N
+CTRP   573      CA
+CTRP   574      C
+CTRP   575      H
+CTRP   576      O
+CTRP   576      OXT
+CTRP   577      HA
+##########################################
+## C-term Histidine (double protonated) ##
+##########################################
+CHIS   578      N
+CHIS   579      CA
+CHIS   580      C
+CHIS   581      H
+CHIS   582      O
+CHIS   582      OXT
+CHIS   583      HA
+#########################################
+## C-term Histidine (delta protonated) ##
+#########################################
+CHID   584      N
+CHID   585      CA
+CHID   586      C
+CHID   587      H
+CHID   588      O
+CHID   588      OXT
+CHID   589      HA
+###########################################
+## C-term Histidine (epsilon protonated) ##
+###########################################
+CHIE   590      N
+CHIE   591      CA
+CHIE   592      C
+CHIE   593      H
+CHIE   594      O
+CHIE   594      OXT
+CHIE   595      HA
+##########################
+## C-term Aspartic Acid ##
+##########################
+CASP   596      N
+CASP   597      CA
+CASP   598      C
+CASP   599      H
+CASP   600      O
+CASP   600      OXT
+CASP   601      HA
+#######################
+## C-term Asparagine ##
+#######################
+CASN   602      N
+CASN   603      CA
+CASN   604      C
+CASN   605      H
+CASN   606      O
+CASN   606      OXT
+CASN   607      HA
+##########################
+## C-term Glutamic Acid ##
+##########################
+CGLU   608      N
+CGLU   609      CA
+CGLU   610      C
+CGLU   611      H
+CGLU   612      O
+CGLU   612      OXT
+CGLU   613      HA
+######################
+## C-term Glutamine ##
+######################
+CGLN   614      N
+CGLN   615      CA
+CGLN   616      C
+CGLN   617      H
+CGLN   618      O
+CGLN   618      OXT
+CGLN   619      HA
+#######################
+## C-term Methionine ##
+#######################
+CMET   620      N
+CMET   621      CA
+CMET   622      C
+CMET   623      H
+CMET   624      O
+CMET   624      OXT
+CMET   625      HA
+###################
+## C-term Lysine ##
+###################
+CLYS   626      N
+CLYS   627      CA
+CLYS   628      C
+CLYS   629      H
+CLYS   630      O
+CLYS   630      OXT
+CLYS   631      HA
+#####################
+## C-term Arginine ##
+#####################
+CARG   632      N
+CARG   633      CA
+CARG   634      C
+CARG   635      H
+CARG   636      O
+CARG   636      OXT
+CARG   637      HA
+######################
+## C-term Ornithine ##
+######################
+CORN   638      N
+CORN   639      CA
+CORN   640      C
+CORN   641      H
+CORN   642      O
+CORN   642      OXT
+CORN   643      HA
+################
+## C-term AIB ##
+################
+CAIB   644      N
+CAIB   645      CA
+CAIB   646      C
+CAIB   647      H
+CAIB   648      O
+CAIB   648      OXT
+#################
+## TIP3P Water ##
+#################
+HOH    689      O
+HOH    690      H1
+HOH    690      H2
+WAT    689      O
+WAT    690      H1
+WAT    690      H2
+WAT    689      OW
+WAT    690      HW
+############
+## Metals ##
+############
+NA1    692      NA
+NA+    692      NA+
+ZN2    698      ZN
+#########################
+## Deprotonated Lysine ##
+#########################
+LYH    651      N
+LYH    652      CA
+LYH    653      C
+LYH    654      H
+LYH    655      O
+LYH    656      HA
+LYH    657      CB
+LYH    658      HB2
+LYH    658      HB3
+LYH    659      CG
+LYH    660      HG2
+LYH    660      HG3
+LYH    661      CD
+LYH    662      HD2
+LYH    662      HD3
+LYH    663      CE
+LYH    664      HE2
+LYH    664      HE3
+LYH    665      NZ
+LYH    666      HZ2
+LYH    666      HZ3
+#########
+## SAM ##
+#########
+SAM    701      N
+SAM    702      CA
+SAM    703      C
+SAM    704      HN1
+SAM    704      HN2
+SAM    704      HN3
+SAM    705      O
+SAM    705      OXT
+SAM    706      HA
+SAM    707      CB
+SAM    708      HB2
+SAM    708      HB3
+SAM    709      CG
+SAM    710      HG2
+SAM    710      HG3
+SAM    711      SD
+SAM    712      CE
+SAM    713      HE1
+SAM    713      HE2
+SAM    713      HE3
+SAM    714      C5*
+SAM    715      1H5*
+SAM    715      2H5*
+SAM    716      C4*
+SAM    717      H4*
+SAM    718      O4*
+SAM    719      C1*
+SAM    720      H1*
+SAM    721      C3*
+SAM    722      H3*
+SAM    723      C2*
+SAM    724      1H2*
+SAM    725      O2*
+SAM    726      2HO*
+SAM    727      O3*
+SAM    728      H3T
+SAM    729      N9
+SAM    730      C4
+SAM    731      C5
+SAM    732      N7
+SAM    733      C8
+SAM    734      N3
+SAM    735      C2
+SAM    736      N1
+SAM    737      C6
+SAM    738      H2
+SAM    739      N6
+SAM    740      H61
+SAM    740      H62
+SAM    741      H8
