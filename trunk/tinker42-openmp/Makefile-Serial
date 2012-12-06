@@ -1,0 +1,159 @@
+
+SRC = /home/wangsl/SRC/Tinker-OpenMP/source
+B = /home/wangsl/SRC/Tinker-OpenMP/Bin-OpenMP
+
+O = $(B)/obj
+E = $(B)/exe
+
+F77 = ifort
+CC = icc 
+CCC = icpc 
+
+LINK = $(F77) -i-dynamic
+
+TINKERLIB = $(O)/libtinker42.a
+
+LIBS =  -L . -L/$(O) -ltinker42 \
+	-L/opt/intel/fce/10.1.008.lib  -L/opt/intel/cce/10.1.008/lib \
+	-L/opt/intel/mkl/10.0.1.014/lib/em64t \
+	-lmkl_em64t -lifcore -lstdc++ -lifport
+
+FFLAGS = -132 -O3 -fPIC -WB -align -Zp8 -axW -unroll -ip -xP -openmp
+CFLAGS = -O3 -fPIC -wB -align -Zp8 -axW -unroll -ip -xP -openmp 
+
+OPTFLAGS = $(CFLAGS)
+LINKFLAGS = $(FFLAGS)
+
+LIBFLAGS = -cru
+
+#################################################################
+##  Should not be Necessary to Change Things Below this Point  ##
+#################################################################
+
+test : $(E)/analyze #$(E)/gradtest #$(E)/dynamic $(E)/analyze  $(E)/minrigid
+
+all :   $(E)/alchemy  $(E)/analyze  $(E)/anneal  $(E)/archive  \
+	$(E)/correlate  $(E)/crystal  $(E)/diffuse  $(E)/distgeom  $(E)/document  \
+	$(E)/dynamic  $(E)/gda  $(E)/intedit  $(E)/intxyz  $(E)/minimize  \
+	$(E)/minirot  $(E)/minrigid  $(E)/monte  $(E)/newton  $(E)/newtrot  \
+	$(E)/nucleic  $(E)/optimize  $(E)/optirot  $(E)/optrigid  $(E)/path  \
+	$(E)/pdbxyz  $(E)/polarize  $(E)/prmedit  $(E)/protein  $(E)/pss  \
+	$(E)/pssrigid  $(E)/pssrot  $(E)/radial  $(E)/saddle  $(E)/scan  \
+	$(E)/sniffer  $(E)/spacefill  $(E)/spectrum  $(E)/superpose  $(E)/sybylxyz  \
+	$(E)/testgrad  $(E)/testhess  $(E)/testlight  $(E)/testrot  $(E)/timer  \
+	$(E)/timerot  $(E)/vibrate  $(E)/vibrot  $(E)/xtalfit  $(E)/xtalmin  \
+	$(E)/xyzedit  $(E)/xyzint  $(E)/xyzpdb  $(E)/xyzsybyl  
+
+EXE_FILES = $(E)/alchemy  $(E)/analyze  $(E)/anneal  $(E)/archive  \
+	$(E)/correlate  $(E)/crystal  $(E)/diffuse  $(E)/distgeom  $(E)/document  \
+	$(E)/dynamic  $(E)/gda  $(E)/intedit  $(E)/intxyz  $(E)/minimize  \
+	$(E)/minirot  $(E)/minrigid  $(E)/monte  $(E)/newton  $(E)/newtrot  \
+	$(E)/nucleic  $(E)/optimize  $(E)/optirot  $(E)/optrigid  $(E)/path  \
+	$(E)/pdbxyz  $(E)/polarize  $(E)/prmedit  $(E)/protein  $(E)/pss  \
+	$(E)/pssrigid  $(E)/pssrot  $(E)/radial  $(E)/saddle  $(E)/scan  \
+	$(E)/sniffer  $(E)/spacefill  $(E)/spectrum  $(E)/superpose  $(E)/sybylxyz  \
+	$(E)/testgrad  $(E)/testhess  $(E)/testlight  $(E)/testrot  $(E)/timer  \
+	$(E)/timerot  $(E)/vibrate  $(E)/vibrot  $(E)/xtalfit  $(E)/xtalmin  \
+	$(E)/xyzedit  $(E)/xyzint  $(E)/xyzpdb  $(E)/xyzsybyl  
+
+SUBOBJS = $(O)/groups.o  $(O)/estrtor1.o  $(O)/erf.o  $(O)/eangang.o  $(O)/eopbend.o  \
+	$(O)/prtpdb.o  $(O)/eopbend3.o  $(O)/mdsave.o  $(O)/eopbend1.o  $(O)/column.o  \
+	$(O)/calendar.o  $(O)/nextarg.o  $(O)/lbfgs.o  $(O)/cspline.o  $(O)/initprm.o  \
+	$(O)/delete.o  $(O)/eimprop1.o  $(O)/getnumb.o  $(O)/center.o  $(O)/beeman.o  \
+	$(O)/etors3.o  $(O)/pressure.o  $(O)/lights.o  $(O)/unitcell.o  $(O)/moments.o  \
+	$(O)/rings.o  $(O)/diffeq.o  $(O)/erxnfld.o  $(O)/epitors1.o  $(O)/ehal2.o  \
+	$(O)/energy.o  $(O)/empole2.o  $(O)/makexyz.o  $(O)/kbond.o  $(O)/kopdist.o  \
+	$(O)/extra2.o  $(O)/molecule.o  $(O)/empole1.o  $(O)/surface.o  $(O)/shakeup.o  \
+	$(O)/rotlist.o  $(O)/emetal.o  $(O)/gradient.o  $(O)/mdinit.o  $(O)/torsions.o  \
+	$(O)/kangang.o  $(O)/ebuck2.o  $(O)/egeom2.o  $(O)/makepdb.o  $(O)/eangang1.o  \
+	$(O)/replica.o  $(O)/epitors3.o  $(O)/volume2.o  $(O)/etors.o  $(O)/sockets.o  \
+	$(O)/extra.o  $(O)/emm3hb.o  $(O)/orthog.o  $(O)/ebuck1.o  $(O)/xyzatm.o  \
+	$(O)/getkey.o  $(O)/etortor2.o  $(O)/embed.o  $(O)/egeom1.o  $(O)/echarge1.o  \
+	$(O)/connolly.o  $(O)/edipole.o  $(O)/prtprm.o  $(O)/getpdb.o  $(O)/fatal.o  \
+	$(O)/ebuck3.o  $(O)/elj2.o  $(O)/extra1.o  $(O)/analysis.o  $(O)/optsave.o  \
+	$(O)/emm3hb3.o  $(O)/kmetal.o  $(O)/kangle.o  $(O)/tncg.o  $(O)/rotpole.o  \
+	$(O)/ksolv.o  $(O)/invbeta.o  $(O)/echgdpl3.o  $(O)/kpolar.o  $(O)/ebond2.o  \
+	$(O)/polymer.o  $(O)/search.o  $(O)/volume1.o  $(O)/eangle.o  $(O)/final.o  \
+	$(O)/born.o  $(O)/diagq.o  $(O)/kpitors.o  $(O)/edipole3.o  $(O)/rmsfit.o  \
+	$(O)/emetal1.o  $(O)/prtint.o  $(O)/prmkey.o  $(O)/cholesky.o  $(O)/korbit.o  \
+	$(O)/eurey1.o  $(O)/eopbend2.o  $(O)/eimprop.o  $(O)/getprm.o  $(O)/ebond1.o  \
+	$(O)/estrbnd3.o  $(O)/eimptor3.o  $(O)/kewald.o  $(O)/image.o  $(O)/geometry.o  \
+	$(O)/egauss.o  $(O)/rgdstep.o  $(O)/angles.o  $(O)/jacobi.o  $(O)/getime.o  \
+	$(O)/extra3.o  $(O)/egeom.o  $(O)/sktstuff.o  $(O)/square.o  $(O)/mdstat.o  \
+	$(O)/zatom.o  $(O)/kimptor.o  $(O)/random.o  $(O)/orient.o  $(O)/getxyz.o  \
+	$(O)/getmol2.o  $(O)/egauss2.o  $(O)/eangle1.o  $(O)/basefile.o  $(O)/epitors.o  \
+	$(O)/bspline.o  $(O)/empole.o  $(O)/kcharge.o  $(O)/active.o  $(O)/eangang3.o  \
+	$(O)/connect.o  $(O)/eurey3.o  $(O)/getint.o  $(O)/bonds.o  $(O)/kdipole.o  \
+	$(O)/number.o  $(O)/epitors2.o  $(O)/etortor.o  $(O)/echarge.o  $(O)/eurey2.o  \
+	$(O)/freeunit.o  $(O)/echarge3.o  $(O)/getref.o  $(O)/katom.o  $(O)/kimprop.o  \
+	$(O)/command.o  $(O)/fftpack.o  $(O)/attach.o  $(O)/etors1.o  $(O)/echgdpl2.o  \
+	$(O)/estrbnd1.o  $(O)/eimptor.o  $(O)/numgrad.o  $(O)/ehal.o  $(O)/inertia.o  \
+	$(O)/gyrate.o  $(O)/clock.o  $(O)/eopdist1.o  $(O)/upcase.o  $(O)/hessian.o  \
+	$(O)/estrtor3.o  $(O)/initial.o  $(O)/cutoffs.o  $(O)/esolv2.o  $(O)/induce.o  \
+	$(O)/kstrbnd.o  $(O)/prtxyz.o  $(O)/echgdpl1.o  $(O)/sigmoid.o  $(O)/elj3.o  \
+	$(O)/readpdb.o  $(O)/maxwell.o  $(O)/echgdpl.o  $(O)/egeom3.o  $(O)/emetal2.o  \
+	$(O)/impose.o  $(O)/eimptor2.o  $(O)/echarge2.o  $(O)/chkxyz.o  $(O)/kmpole.o  \
+	$(O)/fft3d.o  $(O)/estrtor.o  $(O)/getstring.o  $(O)/eopdist.o  $(O)/ocvm.o  \
+	$(O)/quatfit.o  $(O)/eopdist3.o  $(O)/eangle3.o  $(O)/etortor3.o  $(O)/getword.o  \
+	$(O)/kvdw.o  $(O)/eangang2.o  $(O)/ktors.o  $(O)/smooth.o  $(O)/initrot.o  \
+	$(O)/makeint.o  $(O)/gradrot.o  $(O)/surfatom.o  $(O)/prterr.o  $(O)/bitors.o  \
+	$(O)/estrtor2.o  $(O)/prtdyn.o  $(O)/readdyn.o  $(O)/ehal1.o  $(O)/esolv.o  \
+	$(O)/egauss1.o  $(O)/sdstep.o  $(O)/cluster.o  $(O)/bounds.o  $(O)/mechanic.o  \
+	$(O)/initres.o  $(O)/kstrtor.o  $(O)/eopdist2.o  $(O)/grpline.o  $(O)/kgeom.o  \
+	$(O)/volume.o  $(O)/readxyz.o  $(O)/etortor1.o  $(O)/invert.o  $(O)/emetal3.o  \
+	$(O)/eimptor1.o  $(O)/power.o  $(O)/edipole2.o  $(O)/hybrid.o  $(O)/numeral.o  \
+	$(O)/chkpole.o  $(O)/eurey.o  $(O)/lowcase.o  $(O)/prtmol2.o  $(O)/etors2.o  \
+	$(O)/ktortor.o  $(O)/openend.o  $(O)/temper.o  $(O)/erxnfld3.o  $(O)/sort.o  \
+	$(O)/egauss3.o  $(O)/eangle2.o  $(O)/switch.o  $(O)/elj.o  $(O)/empole3.o  \
+	$(O)/ebond.o  $(O)/version.o  $(O)/readseq.o  $(O)/promo.o  $(O)/control.o  \
+	$(O)/bicubic.o  $(O)/eimprop2.o  $(O)/ebond3.o  $(O)/kopbend.o  $(O)/merge.o  \
+	$(O)/prtseq.o  $(O)/readprm.o  $(O)/hessrgd.o  $(O)/trimtext.o  $(O)/readint.o  \
+	$(O)/eimprop3.o  $(O)/piscf.o  $(O)/orbital.o  $(O)/gettext.o  $(O)/suffix.o  \
+	$(O)/estrbnd2.o  $(O)/precise.o  $(O)/emm3hb1.o  $(O)/esolv3.o  $(O)/kurey.o  \
+	$(O)/insert.o  $(O)/emm3hb2.o  $(O)/edipole1.o  $(O)/erxnfld1.o  $(O)/rattle.o  \
+	$(O)/torphase.o  $(O)/esolv1.o  $(O)/mutate.o  $(O)/setime.o  $(O)/readmol2.o  \
+	$(O)/ebuck.o  $(O)/verlet.o  $(O)/elj1.o  $(O)/overlap.o  $(O)/ehal3.o  \
+	$(O)/makeref.o  $(O)/erxnfld2.o  $(O)/hessrot.o  $(O)/lattice.o  $(O)/nexttext.o  \
+	$(O)/estrbnd.o  $(O)/field.o  $(O)/gradrgd.o  $(O)/mdrest.o  $(O)/kinetic.o
+
+#	$(O)/intscan.o  $(O)/die.o  $(O)/tcrash.o  $(O)/kcom.o  $(O)/izero.o \
+#	$(O)/logicalval.o  $(O)/auxF.o  $(O)/linend.o  $(O)/ecom.o  $(O)/getkeyword.o
+
+$(SRC)/%io.C: %.h
+	cd $(SRC); perl io.pl $<
+$(O)/%.o: $(SRC)/%.F
+	cd $(O); $(F77) $(FFLAGS) -c $<
+$(O)/%.o: $(SRC)/%.C
+	cd $(O); $(CCC) $(CFLAGS) -c $<
+
+$(O)/libtinker42.a: $(SUBOBJS)
+	cd $(O); ar $(LIBFLAGS) $(TINKERLIB) $(SUBOBJS)
+	ranlib $(TINKERLIB)
+
+rmlib:
+	rm -f $(TINKERLIB)
+
+clean:
+	rm -f $(SRC)/*~ $(O)/* $(E)/*  $(SRC)/*io.C  \
+	$(SRC)/depend_ftran  $(SRC)/depend_cpp  $(EXE_FILES) $(SRC)/exes.file
+
+###############################################################
+##  Next Section has Explicit Dependencies on Include Files  ##
+###############################################################
+
+depend_ftran : 
+	perl find.include.pl *.F > $@
+depend_cpp :
+	g++ -MM *.[cC] | dep.pl > $@
+
+exes.file :
+	perl exe.pl >& $@
+
+include exes.file
+include depend_ftran
+include depend_cpp
+
+.PRECIOUS: $(SRC)/%io.C $(SRC)/%.C $(SRC)/%.c $(SRC)/%.f $(SRC)/%.h $(O)/%.o
+
+$(E)/gradtest : $(O)/gradtest.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/gradtest $(O)/gradtest.o $(LIBS)

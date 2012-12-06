@@ -1,0 +1,159 @@
+$(E)/alchemy : $(O)/alchemy.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/alchemy $(O)/alchemy.o $(LIBS)
+
+$(E)/analyze : $(O)/analyze.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/analyze $(O)/analyze.o $(LIBS)
+
+$(E)/anneal : $(O)/anneal.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/anneal $(O)/anneal.o $(LIBS)
+
+$(E)/archive : $(O)/archive.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/archive $(O)/archive.o $(LIBS)
+
+$(E)/correlate : $(O)/correlate.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/correlate $(O)/correlate.o $(LIBS)
+
+$(E)/crystal : $(O)/crystal.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/crystal $(O)/crystal.o $(LIBS)
+
+$(E)/diffuse : $(O)/diffuse.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/diffuse $(O)/diffuse.o $(LIBS)
+
+$(E)/distgeom : $(O)/distgeom.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/distgeom $(O)/distgeom.o $(LIBS)
+
+$(E)/document : $(O)/document.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/document $(O)/document.o $(LIBS)
+
+$(E)/dynamic : $(O)/dynamic.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/dynamic $(O)/dynamic.o $(LIBS)
+
+$(E)/gda : $(O)/gda.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/gda $(O)/gda.o $(LIBS)
+
+$(E)/intedit : $(O)/intedit.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/intedit $(O)/intedit.o $(LIBS)
+
+$(E)/intxyz : $(O)/intxyz.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/intxyz $(O)/intxyz.o $(LIBS)
+
+$(E)/minimize : $(O)/minimize.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/minimize $(O)/minimize.o $(LIBS)
+
+$(E)/minirot : $(O)/minirot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/minirot $(O)/minirot.o $(LIBS)
+
+$(E)/minrigid : $(O)/minrigid.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/minrigid $(O)/minrigid.o $(LIBS)
+
+$(E)/monte : $(O)/monte.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/monte $(O)/monte.o $(LIBS)
+
+$(E)/newton : $(O)/newton.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/newton $(O)/newton.o $(LIBS)
+
+$(E)/newtrot : $(O)/newtrot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/newtrot $(O)/newtrot.o $(LIBS)
+
+$(E)/nucleic : $(O)/nucleic.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/nucleic $(O)/nucleic.o $(LIBS)
+
+$(E)/optimize : $(O)/optimize.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/optimize $(O)/optimize.o $(LIBS)
+
+$(E)/optirot : $(O)/optirot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/optirot $(O)/optirot.o $(LIBS)
+
+$(E)/optrigid : $(O)/optrigid.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/optrigid $(O)/optrigid.o $(LIBS)
+
+$(E)/path : $(O)/path.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/path $(O)/path.o $(LIBS)
+
+$(E)/pdbxyz : $(O)/pdbxyz.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/pdbxyz $(O)/pdbxyz.o $(LIBS)
+
+$(E)/polarize : $(O)/polarize.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/polarize $(O)/polarize.o $(LIBS)
+
+$(E)/prmedit : $(O)/prmedit.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/prmedit $(O)/prmedit.o $(LIBS)
+
+$(E)/protein : $(O)/protein.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/protein $(O)/protein.o $(LIBS)
+
+$(E)/pss : $(O)/pss.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/pss $(O)/pss.o $(LIBS)
+
+$(E)/pssrigid : $(O)/pssrigid.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/pssrigid $(O)/pssrigid.o $(LIBS)
+
+$(E)/pssrot : $(O)/pssrot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/pssrot $(O)/pssrot.o $(LIBS)
+
+$(E)/radial : $(O)/radial.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/radial $(O)/radial.o $(LIBS)
+
+$(E)/saddle : $(O)/saddle.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/saddle $(O)/saddle.o $(LIBS)
+
+$(E)/scan : $(O)/scan.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/scan $(O)/scan.o $(LIBS)
+
+$(E)/sniffer : $(O)/sniffer.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/sniffer $(O)/sniffer.o $(LIBS)
+
+$(E)/spacefill : $(O)/spacefill.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/spacefill $(O)/spacefill.o $(LIBS)
+
+$(E)/spectrum : $(O)/spectrum.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/spectrum $(O)/spectrum.o $(LIBS)
+
+$(E)/superpose : $(O)/superpose.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/superpose $(O)/superpose.o $(LIBS)
+
+$(E)/sybylxyz : $(O)/sybylxyz.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/sybylxyz $(O)/sybylxyz.o $(LIBS)
+
+$(E)/testgrad : $(O)/testgrad.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/testgrad $(O)/testgrad.o $(LIBS)
+
+$(E)/testhess : $(O)/testhess.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/testhess $(O)/testhess.o $(LIBS)
+
+$(E)/testlight : $(O)/testlight.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/testlight $(O)/testlight.o $(LIBS)
+
+$(E)/testrot : $(O)/testrot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/testrot $(O)/testrot.o $(LIBS)
+
+$(E)/timer : $(O)/timer.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/timer $(O)/timer.o $(LIBS)
+
+$(E)/timerot : $(O)/timerot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/timerot $(O)/timerot.o $(LIBS)
+
+$(E)/vibrate : $(O)/vibrate.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/vibrate $(O)/vibrate.o $(LIBS)
+
+$(E)/vibrot : $(O)/vibrot.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/vibrot $(O)/vibrot.o $(LIBS)
+
+$(E)/xtalfit : $(O)/xtalfit.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/xtalfit $(O)/xtalfit.o $(LIBS)
+
+$(E)/xtalmin : $(O)/xtalmin.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/xtalmin $(O)/xtalmin.o $(LIBS)
+
+$(E)/xyzedit : $(O)/xyzedit.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/xyzedit $(O)/xyzedit.o $(LIBS)
+
+$(E)/xyzint : $(O)/xyzint.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/xyzint $(O)/xyzint.o $(LIBS)
+
+$(E)/xyzpdb : $(O)/xyzpdb.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/xyzpdb $(O)/xyzpdb.o $(LIBS)
+
+$(E)/xyzsybyl : $(O)/xyzsybyl.o $(TINKERLIB) $(SIMLIB)
+	$(LINK) $(LINKFLAGS) -o $(E)/xyzsybyl $(O)/xyzsybyl.o $(LIBS)
+
