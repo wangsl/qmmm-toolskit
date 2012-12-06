@@ -1,0 +1,11 @@
+die.o: die.h fort.h
+extension.o: /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/ndarrayobject.h /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/numpyconfig.h /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/__multiarray_api.h /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/old_defines.h readtnc2.h
+extension-old.o: extension- /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/ndarrayobject.h /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/numpyconfig.h /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/__multiarray_api.h /share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include/numpy/old_defines.h readtnc2.h
+indent.o: indent.h
+NetCDF.o: NetCDF.h /share/apps/netcdf/3.6.3/intel/include/netcdfcpp.h /share/apps/netcdf/3.6.3/intel/include/ncvalues.h /share/apps/netcdf/3.6.3/intel/include/netcdf.h table.h indent.h die.h fort.h str.h
+NetCDFio.o: indent.h NetCDF.h /share/apps/netcdf/3.6.3/intel/include/netcdfcpp.h /share/apps/netcdf/3.6.3/intel/include/ncvalues.h /share/apps/netcdf/3.6.3/intel/include/netcdf.h table.h die.h fort.h
+out.o: out.h die.h fort.h fmacro.h
+ReadNetCDFtraj.o: ReadNetCDFtraj.h coord.h str.h die.h fort.h NetCDF.h /share/apps/netcdf/3.6.3/intel/include/netcdfcpp.h /share/apps/netcdf/3.6.3/intel/include/ncvalues.h /share/apps/netcdf/3.6.3/intel/include/netcdf.h table.h indent.h NCtrajdata.h NCrestartdata.h utility01.h
+ReadNetCDFtrajio.o: indent.h ReadNetCDFtraj.h coord.h str.h die.h fort.h NetCDF.h /share/apps/netcdf/3.6.3/intel/include/netcdfcpp.h /share/apps/netcdf/3.6.3/intel/include/ncvalues.h /share/apps/netcdf/3.6.3/intel/include/netcdf.h table.h NCtrajdata.h
+readtnc2.o: readtnc2.h ReadNetCDFtraj.h coord.h str.h die.h fort.h NetCDF.h /share/apps/netcdf/3.6.3/intel/include/netcdfcpp.h /share/apps/netcdf/3.6.3/intel/include/ncvalues.h /share/apps/netcdf/3.6.3/intel/include/netcdf.h table.h indent.h NCtrajdata.h
+utilC01.o: fort.h die.h
