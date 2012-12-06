@@ -1,0 +1,71 @@
+#!/bin/env python
+
+from sys import exit
+from TNC2 import MDTNC2
+
+tnc2 = MDTNC2("HDAC-MD.tnc2")
+
+print tnc2.n_atoms
+print tnc2.n_snapshots
+print tnc2.atom_types
+
+print tnc2.active_atom_list().shape
+
+
+exit()
+
+i = 0
+while i < tnc2.n_snapshots :
+    print "\n Snapshot index: %i" % i
+
+    xyz = tnc2.coordinates(i)
+    print " Coordinates"
+    print xyz
+
+    if tnc2.qm_esp_charges_saved() :
+        print " QM ESP charges"
+        print tnc2.qm_esp_charges()
+
+    if tnc2.active_atom_gradients_saved() :
+        print " Active atom gradients"
+        print tnc2.active_atom_gradients()
+    
+    i += 1
+    
+tnc2.delete()
+
+k = 0
+while k < 2 :
+    tnc2 = MDTNC2("HDAC-MD.tnc2")
+    
+    print tnc2.n_atoms
+    print tnc2.n_snapshots
+    print tnc2.atom_types
+    
+    print tnc2.active_atom_list().shape
+    
+    i = 0
+    while i < tnc2.n_snapshots :
+        print "\n Snapshot index: %i" % i
+        
+        xyz = tnc2.coordinates(i)
+        print " Coordinates"
+        print xyz
+        
+        if tnc2.qm_esp_charges_saved() :
+            print " QM ESP charges"
+            print tnc2.qm_esp_charges()
+            
+        if tnc2.active_atom_gradients_saved() :
+            print " Active atom gradients"
+            print tnc2.active_atom_gradients()
+                
+        i += 1
+                
+    tnc2.delete()
+
+    k += 1
+    
+
+    
+
