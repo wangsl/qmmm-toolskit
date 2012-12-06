@@ -1,0 +1,333 @@
+$(O)/active.o: couple.i usage.i keys.i iounit.i inform.i atoms.i sizes.i
+$(O)/alchemy.o: usage.i analyz.i files.i katoms.i inform.i energi.i sizes.i potent.i mutant.i iounit.i atoms.i units.i
+$(O)/analysis.o: analyz.i vdwpot.i energi.i sizes.i group.i bound.i potent.i inter.i atoms.i
+$(O)/analyze.o: analyz.i files.i strtor.i pitors.i imptor.i polgrp.i urey.i inter.i iounit.i atoms.i bitor.i cutoff.i kvdws.i virial.i strbnd.i bond.i tortor.i mpole.i moment.i solute.i molcul.i ktrtor.i opbend.i dipole.i vdw.i potent.i atmtyp.i tors.i improp.i chgpot.i angle.i energi.i inform.i sizes.i charge.i action.i opdist.i angang.i polar.i units.i
+$(O)/angles.o: iounit.i atoms.i atmlst.i angle.i sizes.i couple.i
+$(O)/anneal.o: warp.i iounit.i atoms.i bond.i bound.i mdstuf.i solute.i bath.i potent.i atmtyp.i usage.i inform.i sizes.i
+$(O)/archive.o: files.i titles.i iounit.i atoms.i atmtyp.i usage.i inform.i sizes.i couple.i
+$(O)/attach.o: iounit.i atoms.i sizes.i couple.i
+$(O)/basefile.o: files.i
+$(O)/beeman.o: moldyn.i atoms.i shake.i atmtyp.i usage.i sizes.i units.i
+$(O)/bitors.o: iounit.i bitor.i angle.i sizes.i couple.i
+$(O)/bonds.o: iounit.i atoms.i bond.i atmlst.i sizes.i couple.i
+$(O)/born.o: iounit.i atoms.i solute.i atmtyp.i math.i inform.i sizes.i couple.i units.i
+$(O)/bounds.o: atoms.i boxes.i molcul.i atmtyp.i sizes.i
+$(O)/center.o: align.i sizes.i
+$(O)/chkpole.o: atoms.i mpole.i sizes.i
+$(O)/chkxyz.o: iounit.i atoms.i sizes.i
+$(O)/cluster.o: iounit.i atoms.i cutoff.i bound.i molcul.i keys.i group.i atmtyp.i inform.i sizes.i
+$(O)/column.o: sizes.i
+$(O)/command.o: argue.i socket.i sizes.i
+$(O)/connect.o: atoms.i zcoord.i zclose.i sizes.i couple.i
+$(O)/connolly.o: iounit.i atoms.i faces.i math.i inform.i sizes.i
+$(O)/control.o: output.i keys.i inform.i sizes.i
+$(O)/correlate.o: files.i iounit.i atoms.i atmtyp.i inform.i sizes.i
+$(O)/crashF.o: iounit.i
+$(O)/crystal.o: files.i iounit.i atoms.i boxes.i bound.i atmtyp.i math.i sizes.i couple.i
+$(O)/cspline.o: iounit.i
+$(O)/cutoffs.o: cutoff.i bound.i hescut.i keys.i sizes.i
+$(O)/delete.o: iounit.i atoms.i atmtyp.i inform.i sizes.i couple.i
+$(O)/diagq.o: iounit.i inform.i
+$(O)/diffeq.o: iounit.i sizes.i
+$(O)/diffuse.o: iounit.i atoms.i boxes.i molcul.i atmtyp.i sizes.i
+$(O)/distgeom.o: files.i disgeo.i kgeoms.i iounit.i atoms.i refer.i bond.i atmtyp.i tors.i math.i angle.i inform.i sizes.i couple.i
+$(O)/document.o: iounit.i
+$(O)/dynamic.o: iounit.i atoms.i bond.i bound.i mdstuf.i solute.i stodyn.i bath.i potent.i usage.i inform.i sizes.i
+$(O)/eangang1.o: atoms.i virial.i bound.i deriv.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i angang.i
+$(O)/eangang2.o: atoms.i bound.i deriv.i group.i hessn.i angpot.i math.i angle.i sizes.i angang.i
+$(O)/eangang3.o: analyz.i iounit.i atoms.i bound.i group.i atmtyp.i usage.i angpot.i math.i angle.i inform.i energi.i sizes.i action.i angang.i
+$(O)/eangang.o: atoms.i bound.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i angang.i
+$(O)/eangle1.o: atoms.i virial.i bound.i deriv.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i
+$(O)/eangle2.o: atoms.i bound.i deriv.i group.i hessn.i angpot.i math.i angle.i sizes.i
+$(O)/eangle3.o: analyz.i iounit.i atoms.i bound.i group.i atmtyp.i usage.i angpot.i math.i angle.i inform.i energi.i sizes.i action.i
+$(O)/eangle.o: atoms.i bound.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i
+$(O)/ebond1.o: atoms.i virial.i bond.i bound.i deriv.i group.i usage.i energi.i sizes.i bndpot.i
+$(O)/ebond2.o: atoms.i bond.i bound.i atmlst.i group.i hessn.i sizes.i bndpot.i couple.i
+$(O)/ebond3.o: analyz.i iounit.i atoms.i bond.i bound.i group.i atmtyp.i usage.i inform.i energi.i sizes.i bndpot.i action.i
+$(O)/ebond.o: atoms.i bond.i bound.i group.i usage.i energi.i sizes.i bndpot.i
+$(O)/ebuck1.o: inter.i warp.i iounit.i atoms.i cutoff.i vdwpot.i virial.i light.i boxes.i bound.i molcul.i deriv.i group.i vdw.i atmtyp.i cell.i usage.i math.i shunt.i energi.i sizes.i couple.i
+$(O)/ebuck2.o: warp.i iounit.i atoms.i vdwpot.i bound.i group.i vdw.i atmtyp.i cell.i hessn.i math.i shunt.i sizes.i couple.i
+$(O)/ebuck3.o: analyz.i inter.i warp.i iounit.i atoms.i cutoff.i vdwpot.i light.i boxes.i bound.i molcul.i group.i vdw.i atmtyp.i cell.i usage.i math.i shunt.i inform.i energi.i sizes.i couple.i action.i
+$(O)/ebuck.o: warp.i iounit.i atoms.i cutoff.i vdwpot.i light.i boxes.i bound.i group.i vdw.i atmtyp.i cell.i usage.i math.i shunt.i energi.i sizes.i couple.i
+$(O)/echarge1.o: inter.i iounit.i warp.i atoms.i cutoff.i virial.i light.i boxes.i bound.i molcul.i deriv.i pme.i ewald.i group.i cell.i usage.i chgpot.i math.i shunt.i energi.i sizes.i couple.i charge.i units.i
+$(O)/echarge2.o: warp.i atoms.i cutoff.i bound.i ewald.i group.i cell.i hessn.i chgpot.i math.i shunt.i sizes.i couple.i charge.i units.i
+$(O)/echarge3.o: analyz.i inter.i iounit.i warp.i atoms.i cutoff.i light.i boxes.i bound.i molcul.i pme.i ewald.i group.i atmtyp.i cell.i usage.i chgpot.i math.i shunt.i inform.i energi.i sizes.i couple.i charge.i action.i units.i
+$(O)/echarge.o: iounit.i warp.i atoms.i cutoff.i light.i boxes.i bound.i pme.i ewald.i group.i cell.i usage.i chgpot.i math.i shunt.i energi.i sizes.i couple.i charge.i units.i
+$(O)/echgdpl1.o: inter.i atoms.i virial.i bound.i molcul.i deriv.i dipole.i group.i cell.i usage.i chgpot.i shunt.i energi.i sizes.i couple.i charge.i units.i
+$(O)/echgdpl2.o: atoms.i bound.i dipole.i group.i cell.i hessn.i chgpot.i shunt.i sizes.i couple.i charge.i units.i
+$(O)/echgdpl3.o: analyz.i inter.i iounit.i atoms.i bound.i molcul.i dipole.i group.i atmtyp.i cell.i usage.i chgpot.i shunt.i inform.i energi.i sizes.i couple.i charge.i action.i units.i
+$(O)/echgdpl.o: atoms.i bound.i dipole.i group.i cell.i usage.i chgpot.i shunt.i energi.i sizes.i couple.i charge.i units.i
+$(O)/edipole1.o: inter.i atoms.i virial.i bound.i molcul.i deriv.i dipole.i group.i cell.i usage.i chgpot.i shunt.i energi.i sizes.i units.i
+$(O)/edipole2.o: atoms.i bound.i dipole.i group.i cell.i hessn.i chgpot.i shunt.i sizes.i units.i
+$(O)/edipole3.o: analyz.i inter.i iounit.i atoms.i bound.i molcul.i dipole.i group.i atmtyp.i cell.i usage.i chgpot.i shunt.i inform.i energi.i sizes.i action.i units.i
+$(O)/edipole.o: atoms.i bound.i dipole.i group.i cell.i usage.i chgpot.i shunt.i energi.i sizes.i units.i
+$(O)/egauss1.o: inter.i warp.i atoms.i vdwpot.i molcul.i deriv.i group.i vdw.i atmtyp.i usage.i math.i shunt.i energi.i sizes.i couple.i
+$(O)/egauss2.o: warp.i atoms.i vdwpot.i group.i vdw.i atmtyp.i hessn.i shunt.i sizes.i couple.i
+$(O)/egauss3.o: analyz.i inter.i iounit.i warp.i atoms.i vdwpot.i molcul.i group.i vdw.i atmtyp.i usage.i math.i shunt.i inform.i energi.i sizes.i couple.i action.i
+$(O)/egauss.o: warp.i atoms.i vdwpot.i group.i vdw.i atmtyp.i usage.i math.i shunt.i energi.i sizes.i couple.i
+$(O)/egeom1.o: kgeoms.i inter.i atoms.i virial.i bound.i molcul.i deriv.i group.i atmtyp.i usage.i math.i energi.i sizes.i
+$(O)/egeom2.o: kgeoms.i atoms.i bound.i molcul.i deriv.i group.i atmtyp.i hessn.i math.i sizes.i
+$(O)/egeom3.o: analyz.i kgeoms.i inter.i iounit.i atoms.i bound.i molcul.i group.i atmtyp.i usage.i math.i inform.i energi.i sizes.i action.i
+$(O)/egeom.o: kgeoms.i atoms.i bound.i molcul.i group.i atmtyp.i usage.i math.i energi.i sizes.i
+$(O)/ehal1.o: inter.i iounit.i atoms.i cutoff.i vdwpot.i virial.i light.i boxes.i bound.i molcul.i deriv.i group.i vdw.i atmtyp.i cell.i usage.i shunt.i energi.i sizes.i couple.i
+$(O)/ehal2.o: atoms.i vdwpot.i bound.i group.i vdw.i atmtyp.i cell.i hessn.i shunt.i sizes.i couple.i
+$(O)/ehal3.o: analyz.i inter.i iounit.i atoms.i cutoff.i vdwpot.i light.i boxes.i bound.i molcul.i group.i vdw.i atmtyp.i cell.i usage.i shunt.i inform.i energi.i sizes.i couple.i action.i
+$(O)/ehal.o: iounit.i atoms.i cutoff.i vdwpot.i light.i boxes.i bound.i group.i vdw.i atmtyp.i cell.i usage.i shunt.i energi.i sizes.i couple.i
+$(O)/eimprop1.o: atoms.i virial.i bound.i deriv.i group.i improp.i usage.i torpot.i math.i energi.i sizes.i
+$(O)/eimprop2.o: atoms.i bound.i group.i improp.i hessn.i torpot.i math.i sizes.i
+$(O)/eimprop3.o: analyz.i iounit.i atoms.i bound.i group.i atmtyp.i improp.i usage.i torpot.i math.i inform.i energi.i sizes.i action.i
+$(O)/eimprop.o: atoms.i bound.i group.i improp.i usage.i torpot.i math.i energi.i sizes.i
+$(O)/eimptor1.o: imptor.i atoms.i virial.i bound.i deriv.i group.i usage.i torpot.i energi.i sizes.i
+$(O)/eimptor2.o: imptor.i atoms.i bound.i group.i hessn.i torpot.i sizes.i
+$(O)/eimptor3.o: analyz.i imptor.i iounit.i atoms.i bound.i group.i atmtyp.i usage.i torpot.i math.i inform.i energi.i sizes.i action.i
+$(O)/eimptor.o: imptor.i atoms.i bound.i group.i usage.i torpot.i energi.i sizes.i
+$(O)/elj1.o: inter.i iounit.i warp.i atoms.i cutoff.i vdwpot.i virial.i light.i boxes.i bound.i molcul.i deriv.i group.i vdw.i atmtyp.i cell.i usage.i math.i shunt.i energi.i sizes.i couple.i
+$(O)/elj2.o: warp.i atoms.i vdwpot.i bound.i group.i vdw.i atmtyp.i cell.i hessn.i math.i shunt.i sizes.i couple.i
+$(O)/elj3.o: analyz.i inter.i iounit.i warp.i atoms.i cutoff.i vdwpot.i light.i boxes.i bound.i molcul.i group.i vdw.i atmtyp.i cell.i usage.i math.i shunt.i inform.i energi.i sizes.i couple.i action.i
+$(O)/elj.o: iounit.i warp.i atoms.i cutoff.i vdwpot.i light.i boxes.i bound.i group.i vdw.i atmtyp.i cell.i usage.i math.i shunt.i energi.i sizes.i couple.i
+$(O)/embed.o: files.i disgeo.i kgeoms.i iounit.i atoms.i refer.i minima.i light.i output.i bond.i keys.i tors.i math.i angle.i shunt.i inform.i sizes.i couple.i units.i
+$(O)/emetal1.o: atoms.i kchrge.i deriv.i atmtyp.i energi.i sizes.i couple.i
+$(O)/emetal3.o: analyz.i atoms.i kchrge.i atmtyp.i energi.i sizes.i action.i
+$(O)/emetal.o: atoms.i kchrge.i atmtyp.i energi.i sizes.i couple.i
+$(O)/emm3hb1.o: inter.i iounit.i atoms.i cutoff.i vdwpot.i virial.i light.i boxes.i bond.i bound.i molcul.i deriv.i atmlst.i group.i vdw.i atmtyp.i cell.i usage.i chgpot.i shunt.i energi.i sizes.i couple.i
+$(O)/emm3hb2.o: atoms.i vdwpot.i bond.i bound.i atmlst.i group.i vdw.i atmtyp.i cell.i hessn.i chgpot.i shunt.i sizes.i couple.i
+$(O)/emm3hb3.o: analyz.i inter.i iounit.i atoms.i cutoff.i vdwpot.i light.i boxes.i bond.i bound.i molcul.i atmlst.i group.i vdw.i atmtyp.i cell.i usage.i chgpot.i shunt.i inform.i energi.i sizes.i couple.i action.i
+$(O)/emm3hb.o: iounit.i atoms.i cutoff.i vdwpot.i light.i boxes.i bond.i bound.i atmlst.i group.i vdw.i atmtyp.i cell.i usage.i chgpot.i shunt.i energi.i sizes.i couple.i
+$(O)/empole1.o: polgrp.i inter.i atoms.i cutoff.i virial.i boxes.i mpole.i bound.i molcul.i deriv.i ewreg.i ewald.i group.i mplpot.i cell.i polpot.i usage.i chgpot.i math.i shunt.i energi.i sizes.i couple.i polar.i units.i
+$(O)/empole2.o: polgrp.i atoms.i cutoff.i boxes.i bound.i mpole.i molcul.i deriv.i group.i mplpot.i polpot.i usage.i hessn.i chgpot.i shunt.i sizes.i couple.i polar.i units.i
+$(O)/empole3.o: analyz.i polgrp.i inter.i iounit.i atoms.i cutoff.i boxes.i mpole.i bound.i molcul.i ewreg.i ewald.i group.i potent.i atmtyp.i mplpot.i cell.i polpot.i usage.i chgpot.i math.i shunt.i inform.i energi.i sizes.i couple.i action.i polar.i units.i
+$(O)/empole.o: polgrp.i atoms.i cutoff.i boxes.i mpole.i bound.i ewreg.i ewald.i group.i mplpot.i cell.i polpot.i usage.i chgpot.i math.i shunt.i energi.i sizes.i couple.i polar.i units.i
+$(O)/energy.o: vdwpot.i rigid.i bound.i potent.i energi.i sizes.i
+$(O)/eopbend1.o: atoms.i virial.i bound.i deriv.i opbend.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i
+$(O)/eopbend2.o: atoms.i bound.i deriv.i opbend.i group.i hessn.i angpot.i math.i angle.i sizes.i
+$(O)/eopbend3.o: analyz.i iounit.i atoms.i bound.i opbend.i group.i atmtyp.i usage.i angpot.i math.i angle.i inform.i energi.i sizes.i action.i
+$(O)/eopbend.o: atoms.i bound.i opbend.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i
+$(O)/eopdist1.o: atoms.i virial.i bound.i deriv.i group.i usage.i angpot.i energi.i sizes.i opdist.i
+$(O)/eopdist2.o: atoms.i bound.i group.i usage.i hessn.i angpot.i sizes.i opdist.i
+$(O)/eopdist3.o: analyz.i iounit.i atoms.i bound.i group.i atmtyp.i usage.i angpot.i inform.i energi.i sizes.i action.i opdist.i
+$(O)/eopdist.o: atoms.i bound.i group.i usage.i angpot.i energi.i sizes.i opdist.i
+$(O)/epitors1.o: pitors.i atoms.i virial.i bound.i deriv.i group.i usage.i torpot.i energi.i sizes.i
+$(O)/epitors2.o: pitors.i atoms.i bound.i deriv.i group.i usage.i hessn.i torpot.i angle.i sizes.i
+$(O)/epitors3.o: analyz.i pitors.i iounit.i atoms.i bound.i group.i atmtyp.i usage.i torpot.i math.i inform.i energi.i sizes.i action.i
+$(O)/epitors.o: pitors.i atoms.i bound.i group.i usage.i torpot.i energi.i sizes.i
+$(O)/e.o: iounit.i math.i
+$(O)/erxnfld1.o: atoms.i deriv.i energi.i sizes.i
+$(O)/erxnfld3.o: analyz.i iounit.i atoms.i mpole.i atmtyp.i usage.i chgpot.i shunt.i inform.i energi.i sizes.i action.i
+$(O)/erxnfld.o: rxnfld.i atoms.i mpole.i usage.i chgpot.i shunt.i energi.i sizes.i rxnpot.i units.i
+$(O)/esolv1.o: inter.i warp.i atoms.i virial.i solute.i molcul.i deriv.i group.i atmtyp.i potent.i usage.i math.i shunt.i energi.i sizes.i couple.i charge.i units.i
+$(O)/esolv2.o: warp.i atoms.i solute.i potent.i hessn.i math.i shunt.i sizes.i charge.i units.i
+$(O)/esolv3.o: analyz.i inter.i warp.i iounit.i atoms.i solute.i molcul.i group.i potent.i atmtyp.i usage.i math.i shunt.i inform.i energi.i sizes.i charge.i action.i units.i
+$(O)/esolv.o: warp.i atoms.i solute.i group.i potent.i usage.i math.i shunt.i energi.i sizes.i charge.i units.i
+$(O)/estrbnd1.o: atoms.i virial.i strbnd.i bond.i bound.i deriv.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i
+$(O)/estrbnd2.o: atoms.i strbnd.i bond.i bound.i group.i hessn.i angpot.i math.i angle.i sizes.i
+$(O)/estrbnd3.o: analyz.i iounit.i atoms.i strbnd.i bond.i bound.i group.i atmtyp.i usage.i angpot.i math.i angle.i inform.i energi.i sizes.i action.i
+$(O)/estrbnd.o: atoms.i strbnd.i bond.i bound.i group.i usage.i angpot.i math.i angle.i energi.i sizes.i
+$(O)/estrtor1.o: strtor.i atoms.i virial.i bond.i bound.i deriv.i group.i tors.i usage.i torpot.i energi.i sizes.i
+$(O)/estrtor2.o: strtor.i atoms.i bond.i bound.i group.i tors.i hessn.i torpot.i sizes.i
+$(O)/estrtor3.o: analyz.i strtor.i iounit.i atoms.i bond.i bound.i group.i atmtyp.i tors.i usage.i torpot.i math.i inform.i energi.i sizes.i action.i
+$(O)/estrtor.o: strtor.i atoms.i bond.i bound.i group.i tors.i usage.i torpot.i energi.i sizes.i
+$(O)/etors1.o: warp.i atoms.i virial.i bound.i deriv.i group.i tors.i usage.i torpot.i math.i energi.i sizes.i
+$(O)/etors2.o: warp.i atoms.i bound.i group.i tors.i hessn.i torpot.i math.i sizes.i
+$(O)/etors3.o: analyz.i iounit.i warp.i atoms.i bound.i group.i atmtyp.i tors.i usage.i torpot.i math.i inform.i energi.i sizes.i action.i
+$(O)/etors.o: warp.i atoms.i bound.i group.i tors.i usage.i torpot.i math.i energi.i sizes.i
+$(O)/etortor1.o: atoms.i bitor.i virial.i tortor.i bound.i deriv.i ktrtor.i group.i usage.i torpot.i math.i energi.i sizes.i
+$(O)/etortor2.o: atoms.i bitor.i tortor.i bound.i ktrtor.i group.i hessn.i torpot.i math.i sizes.i units.i
+$(O)/etortor3.o: analyz.i iounit.i atoms.i bitor.i tortor.i bound.i ktrtor.i group.i usage.i torpot.i math.i inform.i energi.i sizes.i action.i
+$(O)/etortor.o: atoms.i bitor.i tortor.i bound.i ktrtor.i group.i atmtyp.i usage.i torpot.i math.i energi.i sizes.i couple.i
+$(O)/eurey1.o: urey.i atoms.i virial.i bound.i deriv.i group.i urypot.i usage.i energi.i sizes.i
+$(O)/eurey2.o: urey.i atoms.i bound.i group.i urypot.i hessn.i sizes.i couple.i
+$(O)/eurey3.o: analyz.i urey.i iounit.i atoms.i bound.i group.i atmtyp.i urypot.i usage.i inform.i energi.i sizes.i action.i
+$(O)/eurey.o: urey.i atoms.i bound.i group.i urypot.i usage.i energi.i sizes.i
+$(O)/extra1.o: atoms.i deriv.i energi.i sizes.i
+$(O)/extra2.o: atoms.i hessn.i sizes.i
+$(O)/extra3.o: analyz.i atoms.i energi.i sizes.i action.i
+$(O)/extra.o: energi.i
+$(O)/fatal.o: iounit.i
+$(O)/fftpack.o: math.i
+$(O)/field.o: keys.i potent.i sizes.i
+$(O)/final.o: iounit.i socket.i inform.i sizes.i
+$(O)/fixwater.o: iounit.i atoms.i atmtyp.i usage.i sizes.i couple.i
+$(O)/freeunit.o: iounit.i
+$(O)/gda.o: files.i warp.i iounit.i atoms.i vdwpot.i minima.i potent.i math.i sizes.i
+$(O)/geometry.o: atoms.i math.i sizes.i
+$(O)/getime.o: chrono.i
+$(O)/getint.o: iounit.i output.i inform.i
+$(O)/getkey.o: files.i argue.i iounit.i keys.i sizes.i
+$(O)/getmol2.o: files.i iounit.i
+$(O)/getnumb.o: ascii.i
+$(O)/getpdb.o: iounit.i
+$(O)/getprm.o: files.i iounit.i params.i keys.i sizes.i
+$(O)/getr.o: files.i titles.i atoms.i refer.i atmtyp.i sizes.i couple.i
+$(O)/getstring.o: ascii.i
+$(O)/gettext.o: ascii.i
+$(O)/getword.o: ascii.i
+$(O)/getxyz.o: iounit.i output.i inform.i
+$(O)/gradient.o: inter.i atoms.i vdwpot.i virial.i rigid.i bound.i deriv.i potent.i energi.i sizes.i
+$(O)/gradrgd.o: atoms.i rigid.i group.i sizes.i
+$(O)/gradrot.o: omega.i atoms.i rotate.i deriv.i potent.i domega.i sizes.i
+$(O)/groups.o: group.i sizes.i
+$(O)/grpline.o: atoms.i rgddyn.i group.i atmtyp.i sizes.i
+$(O)/gyrate.o: atoms.i sizes.i
+$(O)/hessian.o: iounit.i atoms.i vdwpot.i rigid.i mpole.i bound.i hescut.i vdw.i potent.i usage.i hessn.i inform.i sizes.i couple.i
+$(O)/hessianQM.o: qmmm.i iounit.i atoms.i vdwpot.i rigid.i mpole.i bound.i linend.i hescut.i vdw.i potent.i usage.i hessn.i inform.i sizes.i couple.i
+$(O)/hessrgd.o: atoms.i rigid.i group.i sizes.i
+$(O)/hessrot.o: omega.i zcoord.i math.i sizes.i
+$(O)/hybrid.o: kitors.i strtor.i imptor.i iounit.i atoms.i vdwpot.i kvdws.i ktorsn.i strbnd.i katoms.i kchrge.i bond.i mutant.i kdipol.i atmlst.i dipole.i vdw.i atmtyp.i tors.i kstbnd.i math.i angle.i inform.i sizes.i couple.i charge.i kbonds.i kangs.i ksttor.i
+$(O)/image.o: boxes.i cell.i sizes.i
+$(O)/impose.o: iounit.i align.i inform.i sizes.i
+$(O)/induce.o: polgrp.i iounit.i atoms.i cutoff.i boxes.i bound.i mpole.i ewreg.i ewald.i group.i potent.i cell.i polpot.i math.i shunt.i inform.i sizes.i couple.i polar.i units.i
+$(O)/inertia.o: iounit.i atoms.i atmtyp.i math.i sizes.i
+$(O)/initial.o: files.i argue.i warp.i iounit.i atoms.i align.i minima.i output.i socket.i rigid.i params.i bound.i precis.i mutant.i molcul.i zclose.i linmin.i bath.i sequen.i keys.i group.i cell.i inform.i sizes.i pdb.i scales.i
+$(O)/initprm.o: kitors.i kopbnd.i kurybr.i kiprop.i khbond.i vdwpot.i kvdws.i ktorsn.i katoms.i kchrge.i kpitor.i kdipol.i kvdwpr.i kmulti.i ktrtor.i kpolr.i mplpot.i urypot.i kstbnd.i polpot.i kanang.i torpot.i chgpot.i angpot.i math.i korbs.i kopdst.i sizes.i bndpot.i rxnpot.i kbonds.i fields.i kangs.i ksttor.i
+$(O)/initres.o: resdue.i sizes.i
+$(O)/initrot.o: omega.i kgeoms.i iounit.i atoms.i zcoord.i ring.i rotate.i group.i usage.i math.i inform.i sizes.i couple.i
+$(O)/insert.o: iounit.i atoms.i atmtyp.i inform.i sizes.i couple.i
+$(O)/intedit.o: files.i iounit.i atoms.i zcoord.i katoms.i atmtyp.i sizes.i
+$(O)/intxyz.o: files.i titles.i iounit.i
+$(O)/invert.o: iounit.i
+$(O)/jacobi.o: iounit.i
+$(O)/kangang.o: iounit.i atoms.i atmlst.i keys.i potent.i atmtyp.i kanang.i angle.i sizes.i couple.i angang.i
+$(O)/kangle.o: iounit.i atoms.i ring.i keys.i potent.i atmtyp.i usage.i angle.i inform.i sizes.i couple.i kangs.i
+$(O)/katom.o: iounit.i atoms.i katoms.i keys.i atmtyp.i inform.i sizes.i couple.i
+$(O)/kbond.o: iounit.i atoms.i ring.i bond.i atmlst.i keys.i potent.i atmtyp.i tors.i usage.i angle.i inform.i sizes.i couple.i kbonds.i
+$(O)/kcharge.o: iounit.i atoms.i kchrge.i keys.i potent.i atmtyp.i chgpot.i inform.i sizes.i couple.i charge.i
+$(O)/kdipole.o: iounit.i atoms.i ring.i bond.i kdipol.i atmlst.i dipole.i keys.i potent.i inform.i sizes.i couple.i
+$(O)/kewald.o: iounit.i cutoff.i boxes.i pme.i ewreg.i keys.i ewald.i potent.i math.i inform.i sizes.i
+$(O)/kgeom.o: kgeoms.i iounit.i atoms.i bound.i molcul.i keys.i group.i potent.i atmtyp.i sizes.i couple.i
+$(O)/kimprop.o: iounit.i kiprop.i atoms.i keys.i potent.i atmtyp.i improp.i inform.i sizes.i couple.i
+$(O)/kimptor.o: kitors.i imptor.i iounit.i atoms.i keys.i potent.i atmtyp.i math.i inform.i sizes.i couple.i
+$(O)/kinetic.o: moldyn.i atoms.i mdstuf.i rgddyn.i group.i atmtyp.i usage.i sizes.i units.i
+$(O)/kmpole.o: polgrp.i iounit.i atoms.i mpole.i kmulti.i keys.i potent.i inform.i sizes.i couple.i units.i
+$(O)/kopbend.o: kopbnd.i iounit.i atoms.i opbend.i keys.i potent.i atmtyp.i angle.i inform.i sizes.i couple.i
+$(O)/kopdist.o: iounit.i atoms.i atmlst.i keys.i potent.i atmtyp.i kopdst.i angle.i inform.i sizes.i couple.i opdist.i
+$(O)/korbit.o: orbits.i piorbs.i iounit.i atoms.i bond.i keys.i atmtyp.i tors.i pistuf.i korbs.i inform.i sizes.i units.i
+$(O)/kpitors.o: pitors.i iounit.i atoms.i bond.i kpitor.i keys.i potent.i atmtyp.i inform.i sizes.i couple.i
+$(O)/kpolar.o: polgrp.i iounit.i atoms.i mpole.i kpolr.i keys.i potent.i polpot.i inform.i sizes.i couple.i polar.i
+$(O)/ksolv.o: atoms.i bond.i solute.i atmlst.i keys.i potent.i atmtyp.i math.i angle.i sizes.i couple.i units.i
+$(O)/kstrbnd.o: iounit.i atoms.i strbnd.i atmlst.i keys.i potent.i atmtyp.i kstbnd.i angpot.i angle.i sizes.i couple.i
+$(O)/kstrtor.o: strtor.i iounit.i atoms.i atmlst.i keys.i potent.i atmtyp.i tors.i inform.i sizes.i couple.i ksttor.i
+$(O)/ktors.o: iounit.i atoms.i ring.i ktorsn.i keys.i potent.i atmtyp.i tors.i usage.i math.i inform.i sizes.i couple.i
+$(O)/ktortor.o: iounit.i atoms.i bitor.i tortor.i ktrtor.i keys.i potent.i atmtyp.i inform.i sizes.i
+$(O)/kurey.o: urey.i iounit.i kurybr.i atoms.i keys.i potent.i atmtyp.i angle.i inform.i sizes.i
+$(O)/kvdw.o: iounit.i atoms.i khbond.i vdwpot.i kvdws.i kvdwpr.i keys.i vdw.i potent.i atmtyp.i math.i inform.i sizes.i couple.i
+$(O)/lattice.o: iounit.i boxes.i bound.i cell.i math.i inform.i sizes.i
+$(O)/lbfgs.o: iounit.i minima.i output.i linmin.i keys.i math.i inform.i sizes.i scales.i
+$(O)/lights.o: iounit.i light.i boxes.i bound.i cell.i shunt.i sizes.i
+$(O)/makeint.o: iounit.i atoms.i zcoord.i zclose.i math.i inform.i sizes.i couple.i
+$(O)/makepdb.o: files.i atoms.i resdue.i molcul.i sequen.i atmtyp.i sizes.i couple.i pdb.i
+$(O)/maker.o: files.i titles.i atoms.i refer.i atmtyp.i sizes.i couple.i
+$(O)/makexyz.o: atoms.i zcoord.i sizes.i
+$(O)/matout.o: iounit.i
+$(O)/maxwell.o: units.i
+$(O)/mdinit.o: files.i moldyn.i iounit.i atoms.i rigid.i bound.i mdstuf.i molcul.i shake.i stodyn.i rgddyn.i bath.i keys.i group.i atmtyp.i usage.i inform.i sizes.i units.i
+$(O)/mdrest.o: moldyn.i iounit.i atoms.i bound.i mdstuf.i rgddyn.i group.i atmtyp.i inform.i sizes.i units.i
+$(O)/mdsave.o: files.i moldyn.i titles.i iounit.i atoms.i output.i boxes.i socket.i mpole.i bound.i mdstuf.i potent.i atmtyp.i inform.i sizes.i polar.i units.i
+$(O)/mdstat.o: inter.i warp.i iounit.i atoms.i boxes.i bound.i mdstuf.i molcul.i bath.i usage.i inform.i sizes.i units.i
+$(O)/mechanic.o: iounit.i cutoff.i vdwpot.i potent.i inform.i
+$(O)/merge.o: iounit.i atoms.i refer.i atmtyp.i sizes.i couple.i
+$(O)/minimize.o: files.i iounit.i atoms.i keys.i usage.i inform.i sizes.i scales.i
+$(O)/minirot.o: files.i omega.i iounit.i zcoord.i keys.i math.i inform.i sizes.i scales.i
+$(O)/minrigid.o: files.i iounit.i output.i rigid.i keys.i group.i math.i inform.i sizes.i
+$(O)/molecule.o: atoms.i molcul.i atmtyp.i sizes.i couple.i
+$(O)/moments.o: atoms.i mpole.i moment.i dipole.i atmtyp.i usage.i sizes.i charge.i polar.i units.i
+$(O)/monte.o: files.i omega.i iounit.i atoms.i zcoord.i output.i usage.i inform.i sizes.i units.i
+$(O)/mutate.o: iounit.i atoms.i katoms.i mutant.i keys.i sizes.i
+$(O)/newton.o: files.i iounit.i atoms.i keys.i usage.i inform.i sizes.i
+$(O)/newtrot.o: files.i omega.i iounit.i zcoord.i hescut.i keys.i math.i inform.i sizes.i
+$(O)/nextarg.o: argue.i
+$(O)/nucleic.o: files.i titles.i kgeoms.i iounit.i atoms.i output.i katoms.i rigid.i resdue.i molcul.i sequen.i group.i potent.i usage.i math.i inform.i sizes.i nucleo.i couple.i
+$(O)/number.o: iounit.i inform.i
+$(O)/numgrad.o: atoms.i sizes.i
+$(O)/ocvm.o: iounit.i minima.i output.i linmin.i keys.i potent.i math.i inform.i sizes.i scales.i
+$(O)/optimize.o: files.i iounit.i atoms.i keys.i usage.i inform.i sizes.i scales.i
+$(O)/optirot.o: files.i omega.i iounit.i zcoord.i keys.i math.i inform.i sizes.i scales.i
+$(O)/optrigid.o: files.i iounit.i output.i rigid.i keys.i group.i math.i inform.i sizes.i
+$(O)/optsave.o: files.i omega.i iounit.i atoms.i zcoord.i output.i socket.i usage.i math.i sizes.i scales.i
+$(O)/orbital.o: piorbs.i iounit.i atoms.i bond.i keys.i atmtyp.i potent.i tors.i sizes.i couple.i
+$(O)/orient.o: atoms.i rigid.i group.i atmtyp.i math.i sizes.i
+$(O)/overlap.o: units.i
+$(O)/path.o: files.i iounit.i atoms.i align.i minima.i output.i paths.i linmin.i atmtyp.i inform.i sizes.i
+$(O)/pdbxyz.o: files.i iounit.i atoms.i katoms.i resdue.i sequen.i atmtyp.i sizes.i couple.i pdb.i fields.i
+$(O)/pis.o: orbits.i piorbs.i iounit.i atoms.i bond.i atmtyp.i tors.i pistuf.i inform.i sizes.i border.i couple.i units.i
+$(O)/polarize.o: polgrp.i iounit.i atoms.i mpole.i molcul.i potent.i polpot.i inform.i sizes.i polar.i units.i
+$(O)/polymer.o: iounit.i atoms.i boxes.i bond.i bound.i keys.i sizes.i
+$(O)/power.o: iounit.i
+$(O)/pressure.o: atoms.i virial.i boxes.i bound.i mdstuf.i bath.i group.i atmtyp.i usage.i sizes.i units.i
+$(O)/prmedit.o: iounit.i params.i sizes.i
+$(O)/prmkey.o: vdwpot.i potent.i mplpot.i urypot.i polpot.i torpot.i chgpot.i angpot.i sizes.i bndpot.i rxnpot.i fields.i
+$(O)/promo.o: iounit.i
+$(O)/protein.o: files.i titles.i iounit.i atoms.i resdue.i sequen.i phipsi.i sizes.i
+$(O)/prtdyn.o: files.i moldyn.i titles.i atoms.i boxes.i mdstuf.i rgddyn.i group.i sizes.i
+$(O)/prterr.o: files.i output.i
+$(O)/prtint.o: files.i titles.i atoms.i zcoord.i zclose.i atmtyp.i inform.i sizes.i
+$(O)/prtmol2.o: files.i titles.i iounit.i atoms.i bond.i atmtyp.i sizes.i couple.i
+$(O)/prtpdb.o: files.i titles.i sequen.i sizes.i pdb.i
+$(O)/prtprm.o: kitors.i kopbnd.i kurybr.i kiprop.i khbond.i vdwpot.i kvdws.i ktorsn.i katoms.i kchrge.i kpitor.i kdipol.i kvdwpr.i kmulti.i ktrtor.i kpolr.i mplpot.i urypot.i kstbnd.i polpot.i kanang.i chgpot.i angpot.i korbs.i kopdst.i sizes.i bndpot.i kbonds.i fields.i kangs.i ksttor.i
+$(O)/prtseq.o: files.i sequen.i sizes.i
+$(O)/prtxyz.o: qmmm.i files.i titles.i atoms.i atmtyp.i inform.i sizes.i couple.i
+$(O)/pss.o: tree.i files.i omega.i warp.i iounit.i atoms.i zcoord.i refer.i hescut.i math.i inform.i sizes.i
+$(O)/pssrigid.o: files.i warp.i iounit.i atoms.i refer.i minima.i rigid.i molcul.i group.i math.i inform.i sizes.i
+$(O)/pssrot.o: files.i omega.i warp.i iounit.i atoms.i zcoord.i refer.i minima.i math.i inform.i sizes.i
+$(O)/QMHessian.o: qmmm.i iounit.i atoms.i linend.i sizes.i units.i
+$(O)/quatfit.o: align.i sizes.i
+$(O)/radial.o: files.i argue.i iounit.i atoms.i cutoff.i boxes.i bound.i molcul.i potent.i atmtyp.i math.i inform.i sizes.i
+$(O)/random.o: iounit.i keys.i inform.i sizes.i
+$(O)/rattle.o: moldyn.i iounit.i atoms.i virial.i shake.i group.i atmtyp.i usage.i inform.i sizes.i units.i
+$(O)/readdyn.o: files.i moldyn.i iounit.i atoms.i boxes.i mdstuf.i rgddyn.i group.i sizes.i
+$(O)/readint.o: files.i titles.i iounit.i atoms.i zcoord.i zclose.i atmtyp.i inform.i sizes.i
+$(O)/readmol2.o: files.i titles.i iounit.i atoms.i atmtyp.i sizes.i couple.i
+$(O)/readpdb.o: files.i titles.i iounit.i resdue.i sequen.i sizes.i pdb.i
+$(O)/readprm.o: kitors.i kopbnd.i iounit.i kurybr.i kiprop.i khbond.i kvdws.i ktorsn.i katoms.i kchrge.i params.i kpitor.i kdipol.i kvdwpr.i kmulti.i ktrtor.i kpolr.i kstbnd.i kanang.i korbs.i kopdst.i sizes.i kbonds.i fields.i kangs.i ksttor.i
+$(O)/readseq.o: files.i iounit.i resdue.i sequen.i sizes.i
+$(O)/readxyz.o: qmmm.i files.i titles.i iounit.i atoms.i linend.i atmtyp.i inform.i sizes.i couple.i
+$(O)/replica.o: iounit.i boxes.i bound.i cell.i inform.i sizes.i
+$(O)/rgdstep.o: atoms.i virial.i bound.i rgddyn.i group.i atmtyp.i sizes.i units.i
+$(O)/rings.o: iounit.i bitor.i ring.i bond.i tors.i angle.i inform.i sizes.i couple.i
+$(O)/rmsfit.o: align.i sizes.i
+$(O)/rotlist.o: iounit.i atoms.i rotate.i molcul.i zclose.i sizes.i couple.i
+$(O)/rotpole.o: atoms.i mpole.i sizes.i
+$(O)/saddle.o: titles.i iounit.i atoms.i zcoord.i minima.i linmin.i keys.i syntrn.i inform.i sizes.i
+$(O)/scan.o: files.i omega.i iounit.i atoms.i zcoord.i refer.i minima.i output.i math.i inform.i sizes.i
+$(O)/sdstep.o: moldyn.i atoms.i kvdws.i virial.i mdstuf.i shake.i stodyn.i bath.i atmtyp.i usage.i math.i sizes.i couple.i units.i
+$(O)/search.o: linmin.i math.i sizes.i
+$(O)/setime.o: chrono.i
+$(O)/shakeup.o: atoms.i ring.i bond.i bound.i molcul.i shake.i atmlst.i keys.i atmtyp.i usage.i math.i angle.i sizes.i couple.i
+$(O)/sktstu.o: files.i moldyn.i iounit.i atoms.i socket.i mpole.i deriv.i keys.i atmtyp.i potent.i inform.i sizes.i couple.i fields.i charge.i polar.i
+$(O)/smooth.o: warp.i iounit.i atoms.i keys.i inform.i sizes.i fields.i
+$(O)/sniffer.o: files.i iounit.i atoms.i minima.i output.i linmin.i usage.i math.i inform.i sizes.i scales.i
+$(O)/spacefill.o: files.i iounit.i atoms.i kvdws.i atmtyp.i usage.i math.i inform.i sizes.i
+$(O)/spectrum.o: files.i iounit.i math.i units.i
+$(O)/square.o: iounit.i minima.i keys.i inform.i sizes.i
+$(O)/superpose.o: files.i titles.i iounit.i atoms.i align.i atmtyp.i inform.i sizes.i
+$(O)/surface.o: iounit.i atoms.i usage.i math.i inform.i sizes.i
+$(O)/surfatom.o: iounit.i atoms.i math.i sizes.i
+$(O)/switch.o: cutoff.i shunt.i
+$(O)/sybylxyz.o: files.i titles.i iounit.i
+$(O)/temper.o: moldyn.i atoms.i mdstuf.i rgddyn.i bath.i group.i atmtyp.i usage.i sizes.i units.i
+$(O)/testgrad.o: inter.i iounit.i atoms.i solute.i deriv.i usage.i inform.i energi.i sizes.i
+$(O)/testhess.o: files.i iounit.i atoms.i hescut.i usage.i inform.i sizes.i
+$(O)/testlight.o: iounit.i atoms.i cutoff.i vdwpot.i deriv.i potent.i energi.i sizes.i
+$(O)/testrot.o: omega.i iounit.i zcoord.i domega.i math.i inform.i energi.i sizes.i
+$(O)/timer.o: iounit.i hescut.i inform.i sizes.i
+$(O)/timerot.o: iounit.i sizes.i
+$(O)/tinker-test.o: inter.i iounit.i atoms.i virial.i linend.i molcul.i atmtyp.i usage.i sizes.i couple.i
+$(O)/tncg.o: piorbs.i iounit.i minima.i output.i hescut.i linmin.i keys.i potent.i math.i inform.i sizes.i
+$(O)/torsions.o: iounit.i bond.i tors.i sizes.i couple.i
+$(O)/unitcell.o: iounit.i boxes.i bound.i keys.i sizes.i
+$(O)/verlet.o: moldyn.i atoms.i shake.i atmtyp.i usage.i sizes.i units.i
+$(O)/version.o: iounit.i output.i
+$(O)/vibrate.o: files.i iounit.i atoms.i hescut.i atmtyp.i math.i sizes.i units.i
+$(O)/vibrigid.o: iounit.i rigid.i group.i sizes.i
+$(O)/vibrot.o: omega.i iounit.i sizes.i
+$(O)/volume1.o: iounit.i atoms.i math.i sizes.i
+$(O)/volume2.o: iounit.i atoms.i math.i sizes.i
+$(O)/volume.o: sizes.i
+$(O)/wrtegrads.o: atoms.i usage.i sizes.i
+$(O)/xtalfit.o: files.i iounit.i atoms.i xtals.i kvdws.i boxes.i bound.i molcul.i dipole.i vdw.i atmtyp.i potent.i math.i fracs.i sizes.i couple.i charge.i
+$(O)/xtalmin.o: files.i iounit.i atoms.i boxes.i keys.i math.i inform.i sizes.i scales.i
+$(O)/xyzatm.o: iounit.i atoms.i math.i inform.i sizes.i
+$(O)/xyzedit.o: files.i titles.i iounit.i atoms.i refer.i cutoff.i bound.i molcul.i atmtyp.i usage.i math.i sizes.i couple.i units.i
+$(O)/xyzint.o: files.i titles.i iounit.i
+$(O)/xyzpdb.o: files.i
+$(O)/xyzsybyl.o: files.i titles.i iounit.i sizes.i
+$(O)/zatom.o: iounit.i atoms.i zcoord.i katoms.i zclose.i atmtyp.i sizes.i fields.i

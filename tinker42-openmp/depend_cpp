@@ -1,0 +1,5 @@
+crashC.o: tinkercpp.h fort.h
+die.o: die.h
+memory.o: fort.h fint.h memptr.h str.h die.h
+memptr.o: fint.h memptr.h str.h die.h
+nscan.o: fint.h tinkercpp.h fort.h
