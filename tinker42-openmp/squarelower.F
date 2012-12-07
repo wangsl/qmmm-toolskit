@@ -1,5 +1,5 @@
  
-C     $Id: squarelower.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
       
       SubRoutine SquareToLowerTriangular(A, N, L)
       Implicit None

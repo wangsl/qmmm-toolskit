@@ -1,5 +1,5 @@
  
-/* $Id: fort.h 2 2008-02-28 22:52:52Z wangsl $ */
+/* $Id$ */
 
 #ifndef FMACRO_H
 #define FMACRO_H

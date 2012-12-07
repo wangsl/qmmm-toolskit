@@ -1,5 +1,5 @@
  
-C     $Id: gfloat.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
 *Deck GFloat
       function gfloat (iarg)
       real*8 gfloat

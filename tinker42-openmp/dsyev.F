@@ -1,5 +1,5 @@
      
-C     $Id: dsyev.F 9 2008-08-13 15:25:52Z wangsl $
+C     $Id$
 
 #ifndef _MKL_
      

@@ -1,5 +1,5 @@
  
-C     $Id: matout.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
 *Deck MatOut
       Subroutine MatOut(X,M,N,MM,NN)
       Implicit Real*8(A-H,O-Z)

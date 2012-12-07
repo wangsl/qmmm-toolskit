@@ -1,5 +1,5 @@
  
-/* $Id: memfort.h 2 2008-02-28 22:52:52Z wangsl $ */
+/* $Id$ */
 
 #ifndef FORTDEF_H
 #define FORTDEF_H

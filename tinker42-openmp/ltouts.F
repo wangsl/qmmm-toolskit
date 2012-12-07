@@ -1,5 +1,5 @@
  
-C     $Id: ltouts.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
 *Deck LTOutS
       Subroutine LTOutS(IOut,String,Num,N,A,Key)
       Implicit Real*8(A-H,O-Z)

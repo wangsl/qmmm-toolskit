@@ -1,9 +1,11 @@
 
-SRC = /home/sw77/QChem30-Tinker42/Tinker42/src
-B = /home/sw77/QChem30-Tinker42/Tinker42/bin
+# $Id$
 
-O = $(B)/obj
-E = $(B)/exe
+SRC = /home/sw77/QChem4.0-Tinker4.2/qmmm-toolskit/tinker42-openmp
+B = /home/sw77/QChem4.0-Tinker4.2/qmmm-toolskit-build/tinker42-openmp
+
+O = $(B)/objs
+E = $(B)/exes
 
 F77 = ifort
 CC = icc 
@@ -11,7 +13,7 @@ CCC = icpc
 
 OMPFLAG = -openmp
 
-LINK = $(F77) -static #-shared-intel
+LINK = $(F77) -shared-intel
 
 TINKERLIB = $(O)/libtinker42.a
 
