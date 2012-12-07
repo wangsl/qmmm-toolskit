@@ -1,5 +1,5 @@
  
-C     $Id: dzero.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
 
       SubRoutine DZero(N, A)
       Implicit None

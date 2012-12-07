@@ -1,5 +1,5 @@
  
-C     $Id: QMHessian.F 5 2008-03-08 02:30:43Z wangsl $
+C     $Id$
 
 #include "memfort.h"
       

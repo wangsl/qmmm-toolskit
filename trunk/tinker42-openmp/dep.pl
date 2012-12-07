@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 require 5.002;
 use Getopt::Std;
-# $Id: dep.pl 9 2008-08-13 15:25:52Z wangsl $
+# $Id$
 
 $a = '';
 

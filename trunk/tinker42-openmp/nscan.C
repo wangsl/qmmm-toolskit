@@ -1,5 +1,5 @@
  
-/* $Id: nscan.C 3 2008-03-04 17:47:30Z wangsl $ */
+/* $Id$ */
 
 #include <iostream>
 using namespace std;

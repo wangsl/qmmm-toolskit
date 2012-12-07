@@ -1,5 +1,5 @@
  
-C     $Id: outmat.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
 *Deck OutMat
       Subroutine OutMat(IOut,Key,X,M,N,MM,NN)
       Implicit Real*8(A-H,O-Z)

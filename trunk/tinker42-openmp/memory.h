@@ -1,5 +1,5 @@
  
-/* $Id: memory.h 2 2008-02-28 22:52:52Z wangsl $ */
+/* $Id$ */
 
 #ifndef MEMORY_H
 #define MEMORY_H

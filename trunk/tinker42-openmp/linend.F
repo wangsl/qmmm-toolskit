@@ -1,5 +1,5 @@
  
-C     $Id: linend.F 2 2008-02-28 22:52:52Z wangsl $
+C     $Id$
 
       integer function linend(cline)
       implicit real*8(a-h,o-z)

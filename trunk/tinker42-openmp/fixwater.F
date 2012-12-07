@@ -1,5 +1,5 @@
 
-C     $Id: fixwater.F 3 2008-03-04 17:47:30Z wangsl $
+C     $Id$
 
       SubRoutine FixWater
       Implicit None
