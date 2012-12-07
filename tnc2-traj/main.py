@@ -1,5 +1,7 @@
 #!/bin/env python
 
+# $Id$ 
+
 from sys import exit, argv
 from utility import *
 from TNC2 import MDTNC2

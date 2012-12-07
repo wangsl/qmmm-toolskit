@@ -1,4 +1,6 @@
 
+/* $Id$ */
+
 #ifndef READTNC2_H
 #define READTNC2_H
 

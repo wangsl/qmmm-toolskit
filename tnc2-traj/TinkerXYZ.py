@@ -1,5 +1,7 @@
 #!/bin/env python
 
+# $Id$
+
 from string import atoi, atof
 from sys import stdout
 from utility import check_file_exists, die
