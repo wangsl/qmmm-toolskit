@@ -1,5 +1,5 @@
 
-/* $Id: ReadNetCDFtraj.C 158 2009-11-28 19:33:18Z wangsl $ */
+/* $Id$ */
 
 #include <fstream>
 #include "ReadNetCDFtraj.h"

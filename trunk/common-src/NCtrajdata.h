@@ -1,5 +1,5 @@
 
-/* $Id: NCtrajdata.h 158 2009-11-28 19:33:18Z wangsl $ */
+/* $Id$ */
 
 #ifndef NCTRAJDATA_H
 #define NCTRAJDATA_H

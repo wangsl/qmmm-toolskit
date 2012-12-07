@@ -1,6 +1,6 @@
 
 
-/* $Id: fort.h 175 2010-09-06 15:19:30Z wangsl $ */
+/* $Id$ */
 
 #ifndef FMACRO_H
 #define FMACRO_H

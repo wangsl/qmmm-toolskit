@@ -1,4 +1,4 @@
-/* $Id: coord.h 174 2010-07-20 17:09:54Z wangsl $ */
+/* $Id$ */
 
 #ifndef COORD_H
 #define COORD_H

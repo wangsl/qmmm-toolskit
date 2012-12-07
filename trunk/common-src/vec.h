@@ -1,4 +1,4 @@
-/* $Id: vec.h 183 2011-05-05 02:23:35Z wangsl $ */
+/* $Id$ */
 
 #ifndef VEC_H
 #define VEC_H

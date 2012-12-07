@@ -1,5 +1,5 @@
 
-/* $Id: utility01.h 2 2007-10-20 14:59:10Z wangsl $ */
+/* $Id$ */
 
 #ifndef UTILITY01_H
 #define UTILITY01_H

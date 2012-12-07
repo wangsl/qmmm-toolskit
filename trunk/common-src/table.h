@@ -1,5 +1,5 @@
 
-/* $Id: table.h 148 2009-03-21 15:52:57Z wangsl $ */
+/* $Id$ */
 
 #ifndef TABLE_H
 #define TABLE_H

@@ -1,5 +1,5 @@
 
-/* $Id: die.h 147 2009-03-10 19:15:31Z wangsl $ */
+/* $Id$ */
 
 #ifndef DIE_H
 #define DIE_H

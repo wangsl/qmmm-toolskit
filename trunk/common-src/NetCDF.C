@@ -1,6 +1,6 @@
 
 
-/* $Id: NetCDF.C 137 2008-12-22 02:35:06Z wangsl $ */
+/* $Id$ */
 
 #include <cassert>
 #include "NetCDF.h"
