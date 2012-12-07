@@ -2,7 +2,7 @@
 
 #include <iostream>
 using namespace std;
-#include <fstream.h>
+//#include <fstream.h>
 #include "out.h"
 #include "die.h"
 #include "fmacro.h"

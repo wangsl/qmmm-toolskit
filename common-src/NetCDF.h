@@ -1,5 +1,5 @@
 
-/* $Id: NetCDF.h 139 2009-01-04 16:53:15Z wangsl $ */
+/* $Id$ */
 
 #ifndef NET_CDF_H
 #define NET_CDF_H

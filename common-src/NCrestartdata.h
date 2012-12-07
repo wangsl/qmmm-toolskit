@@ -1,5 +1,5 @@
 
-/* $Id: NCrestartdata.h 106 2008-05-21 03:21:03Z wangsl $ */
+/* $Id$ */
 
 #ifndef NCRESTARTDATA_H
 #define NCRESTARTDATA_H

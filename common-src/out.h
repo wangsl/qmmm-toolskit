@@ -1,4 +1,4 @@
-/* $Id: out.h 2 2007-10-20 14:59:10Z wangsl $ */
+/* $Id$ */
 
 #ifndef OUT_H
 #define OUT_H

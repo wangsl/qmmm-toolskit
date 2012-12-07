@@ -1,7 +1,7 @@
 #!/usr/bin/perl -w
 require 5.002;
 use Getopt::Std;
-# $Id: dep,v 1.3 2000/01/13 19:07:25 hstern Exp $
+# $Id$
 
 $a = '$(O)/';
 

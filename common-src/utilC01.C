@@ -1,5 +1,5 @@
 
-/* $Id: utilC01.C 161 2010-03-08 17:05:12Z wangsl $ */
+/* $Id$ */
 
 #include <iostream>
 #include <fstream>

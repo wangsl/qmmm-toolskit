@@ -1,5 +1,5 @@
 
-/* $Id: str.h 171 2010-06-14 02:56:03Z wangsl $ */
+/* $Id$ */
 
 #ifndef STR_H
 #define STR_H

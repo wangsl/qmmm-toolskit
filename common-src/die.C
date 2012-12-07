@@ -1,5 +1,5 @@
 
-/* $Id: die.C 147 2009-03-10 19:15:31Z wangsl $ */
+/* $Id$ */
 
 #include <unistd.h>
 #include <cstdlib>

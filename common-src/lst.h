@@ -1,4 +1,4 @@
-/* $Id: lst.h 161 2010-03-08 17:05:12Z wangsl $ */
+/* $Id$ */
 
 #ifndef LST_H
 #define LST_H
