@@ -4,20 +4,20 @@
 .DEFAULT: .F .for .c .C .cpp .cc .f90
 .SUFFIXES: .F .for .c .C .cpp .cc .f90
 
-O = .
+SRC = /home/sw77/QChem4.0-Tinker4.2/qmmm-toolskit/vmd-plugin
 
-F77 = gfortran
-CC = gcc
-CCC = g++
+O = /home/sw77/QChem4.0-Tinker4.2/qmmm-toolskit-build/vmd-plugin
 
-FPP = fpp
+F77 = ifort
+CC = icc
+CCC = icpc
 
-CFLAGS = -O2 -fPIC -Wall -Wno-deprecated \
-	-I/home/sw77/local/GNU/NetCDF-3.6.3/include
+CFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report \
+	-I/home/sw77/QChem4.0-Tinker4.2/ext-libs/include 
 
-FFLAGS = -O2 -fPIC -Wall
+FFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report 
 
-Link = $(CCC) $(CFLAGS) -i-dynamic
+Link = $(CCC) $(CFLAGS) -shared-intel
 
 LIBS = -L/home/sw77/local/GNU/NetCDF-3.6.3/lib \
 	-lnetcdf_c++ -lnetcdf \
@@ -38,15 +38,15 @@ $(EXENAME) : $(OBJS)
 	$(Link) -o $(EXENAME) $(OBJS) $(LIBS)
 
 $(O)/%.o: %.c
-	cd $(O) ; $(CC) $(CFLAGS) -c $<
+	cd $(O) ; $(CC) $(CFLAGS) -c  $(SRC)/$<
 $(O)/%.o: %.cc
 	cd $(O) ; $(CCC) $(CFLAGS) -c $<
 $(O)/%.o: %.cpp
 	cd $(O) ; $(CCC) $(CFLAGS) -c $<
 $(O)/%.o: %.C
-	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+	cd $(O) ; $(CCC) $(CFLAGS) -c  $(SRC)/$<
 $(O)/%.o: %.F
-	cd $(O); $(FPP) $*.F $*.f; $(F77) $(FFLAGS) -c $*.f; rm $*.f
+	cd $(O) ; $(F77) $(FFLAGS) -c $<	
 $(O)/%.o: %.for
 	cd $(O) ; $(F77) $(FFLAGS) -c $<
 $(O)/%.o: %.f90
@@ -61,4 +61,4 @@ depend :
 
 .PRECIOUS: %io.C %.C %.c %.f %.h $(O)/%.o
 
-include depend
+#include depend
