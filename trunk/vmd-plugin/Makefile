@@ -32,7 +32,7 @@ SUBOBJS = $(O)/die.o  $(O)/out.o  $(O)/indent.o  $(O)/NetCDF.o \
 
 OBJS =  $(O)/main.o  $(SUBOBJS)
 
-$(EXENAME) : $(OBJS) 
+$(EXENAME) : $(O) $(OBJS) 
 	ar -r $(O)/libmyNetCDF.a $(SUBOBJS)
 	ranlib $(O)/libmyNetCDF.a
 	$(Link) -o $(EXENAME) $(OBJS) $(LIBS)
@@ -51,6 +51,9 @@ $(O)/%.o: %.for
 	cd $(O) ; $(F77) $(FFLAGS) -c $<
 $(O)/%.o: %.f90
 	cd $(O) ; $(F90) $(FFLAGS) -c $<
+
+$(O) :
+	mkdir -p $(O)
 
 clean:
 	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a

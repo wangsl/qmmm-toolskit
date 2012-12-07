@@ -33,9 +33,9 @@ LIBFLAGS = -cru
 ##  Should not be Necessary to Change Things Below this Point  ##
 #################################################################
 
-test : $(E)/analyze  $(E)/QMHessian $(E)/tinker-test 
+test : $(O) $(E) $(E)/analyze  $(E)/QMHessian $(E)/tinker-test 
 
-all :   $(E)/alchemy  $(E)/analyze  $(E)/anneal  $(E)/archive  \
+all :   $(O) $(E) $(E)/alchemy  $(E)/analyze  $(E)/anneal  $(E)/archive  \
 	$(E)/correlate  $(E)/crystal  $(E)/diffuse  $(E)/distgeom  $(E)/document  \
 	$(E)/dynamic  $(E)/gda  $(E)/intedit  $(E)/intxyz  $(E)/minimize  \
 	$(E)/minirot  $(E)/minrigid  $(E)/monte  $(E)/newton  $(E)/newtrot  \
@@ -154,6 +154,12 @@ depend_cpp :
 
 exes.file :
 	perl exe.pl >& $@
+
+$(O) :
+	mkdir -p $(O)
+
+$(E) :
+	mkdir -p $(E)
 
 include exes.file
 include depend_ftran
