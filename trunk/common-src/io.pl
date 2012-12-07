@@ -1,6 +1,9 @@
 #!/usr/bin/perl -w
+
+# $Id: io.pl 142 2009-03-05 21:42:52Z wangsl $
+
 require 5.002;
-# $Id: io,v 1.15 2002/04/03 00:38:19 hstern Exp $
+use File::Basename;
 
 $usage = <<EOF;
 usage: mkio [-o][-D<name>] <.h files>
@@ -32,6 +35,9 @@ foreach (@f) {
     open(G, ">$fname") || die "mkio: cannot open $fname";
     select(G);
   }
+
+  $header_file_name = (fileparse($_))[0];
+
   print <<EOF;
 #include <iostream>
 using namespace std;
@@ -39,9 +45,8 @@ using namespace std;
 #include <cstdlib>
 #include <cstring>
 #include \"indent.h\"
-#include \"$_\"
+#include \"$header_file_name\"
 #include \"die.h\"
-#include \"out.h\"
 
 EOF
   undef $super_read;
@@ -119,18 +124,18 @@ sub do_write {
   print <<"EOF" if $show_self;
 void $class\:\:show_self() 
 { 
-  Out() << *this << "\\n" << flush;
+  cout << *this << "\\n" << flush;
 }
 
 EOF
   print <<"EOF";
-ostream & operator<<(ostream &s, const $class &c)
+ostream & operator <<(ostream &s, const $class &c)
 {
-  s << \"{\\n\"\;
+  s << \" {\\n\"\;
   IndentPush();
   c.write_fields(s);
   IndentPop();
-  return s << Indent() << \"}\\n\";
+  return s << Indent() << \" }\";
 }
 
 void $class\:\:write_fields(ostream &s) const
@@ -156,7 +161,7 @@ foreach (@fields) {
       } else {
 	  print "    s << Indent() << \"$key \" << *$key << \"\\n\";\n";
       }
-	  
+      #print "    s << Indent() << \"$key \" << *$key << \"\\n\";\n";
   } elsif ($type[$i] eq "Str") {
     print "  if (strlen($key) > 0)\n";
     print "    s << Indent() << \"$key \" << $key << \"\\n\";\n";
@@ -169,9 +174,9 @@ print "}\n\n";
 
 sub do_read {
   print <<EOF;
-istream & operator>>(istream &s, $class &c)
+istream & operator >>(istream &s, $class &c)
 {
-  char buf[256], bracket;
+  char buf[1024], bracket;
   s >> bracket;
   if (bracket != '{')
     die("error reading class '$class': expected '{', found something else\\n");
@@ -182,11 +187,16 @@ istream & operator>>(istream &s, $class &c)
     } else {
       s.putback(bracket);
     }
+    if(bracket == '!' || bracket == '#') {
+      if(!s.getline(buf, 1024).good()) 
+	die("Error reading class '$class': line too long exceeded 1024 characters");
+      continue;
+    }
     s >> buf;
     if (c.read_field(s, buf) == 0) {
-      Out() << "error: unknown field name: '" << buf << "'\\n"
-               "while reading class '$class'.\\n"
-               "Must be one of:\\n";
+      cout << "error: unknown field name: '" << buf << "'\\n"
+              "while reading class '$class'.\\n"
+              "Must be one of:\\n";
       c.write_field_names();
       die("");
     }
@@ -201,7 +211,7 @@ int $class\:\:read_field(istream &s, const char *buf)
     die("EOF or error reading class '$class'\\n");
 EOF
   print <<EOF if $show_self && $anyout;
-  else if (!strcmp(buf,"show_self"))
+  else if (!strcmp(buf, "show_self"))
     show_self();
 EOF
   undef $i;
@@ -212,7 +222,7 @@ EOF
     $nm =~ s/\(.*//g;
     $nm =~ s/[\*\s]//g;
     push(@readfields,"\'$nm\'");
-    print "  else if (!strcmp(buf,\"$nm\"))\n";
+    print "  else if (!strcmp(buf, \"$nm\"))\n";
     if (/\(([^\)]*)\)/) {
 	my($args) = $1;
 	if ($args =~ /istream/) {
@@ -257,7 +267,7 @@ EOF
   print "}\n\n";
   print "void $class\:\:write_field_names() const\n";
   print "{\n";
-  print "  Out() << \"$fldlst\\n\";\n";
+  print "  cout << \"$fldlst\\n\";\n";
   print "  $super_read\:\:write_field_names();\n" if defined $super_read;
   print "}\n\n";
 }

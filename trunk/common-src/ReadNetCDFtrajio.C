@@ -6,15 +6,14 @@ using namespace std;
 #include "indent.h"
 #include "ReadNetCDFtraj.h"
 #include "die.h"
-#include "out.h"
 
-ostream & operator<<(ostream &s, const NetCDFTrajectoryAtom &c)
+ostream & operator <<(ostream &s, const NetCDFTrajectoryAtom &c)
 {
-  s << "{\n";
+  s << " {\n";
   IndentPush();
   c.write_fields(s);
   IndentPop();
-  return s << Indent() << "}\n";
+  return s << Indent() << " }";
 }
 
 void NetCDFTrajectoryAtom::write_fields(ostream &s) const
