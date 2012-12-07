@@ -1,3 +1,4 @@
+
 /* $Id$ */
 
 #ifndef OUT_H

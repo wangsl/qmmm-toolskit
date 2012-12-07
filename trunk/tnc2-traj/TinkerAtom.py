@@ -1,5 +1,7 @@
 #!/bin/env python
 
+# $Id$
+
 from Cartesian import Cartesian
 
 class TinkerAtom :

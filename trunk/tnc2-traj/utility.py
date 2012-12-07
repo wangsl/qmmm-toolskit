@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/bin/env python
+
+# $Id$
 
 from time import localtime, asctime
 import sys, re, os

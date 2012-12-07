@@ -1,7 +1,14 @@
+
+# $Id$ 
+
 .DEFAULT: .f .for .c .C .cpp .cc
 .SUFFIXES: .f .for .c .C .cpp .cc
 
 O = .
+
+SRC = /home/sw77/QChem4.0-Tinker4.2/qmmm-toolskit/tnc2-traj
+
+O = /home/sw77/QChem4.0-Tinker4.2/qmmm-toolskit-build/tnc2-traj
 
 F77 = ifort
 CC = icc
@@ -9,19 +16,19 @@ CCC = icpc
 
 LD = icpc
 
-CFLAGS = -O3 -fPIC -align -Zp8 -axP -xP -unroll -Wno-deprecated -openmp -ip \
-	-I/usr/include/python2.4 \
-	-I/share/apps/python/2.4.3/lib64/python2.4/site-packages/numpy/core/include \
+CFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report -Wno-deprecated \
+	-I/share/apps/python/2.7.2/intel/include/python2.7 \
+	-I/share/apps/python/2.7.2/intel/lib/python2.7/site-packages/numpy/core/include \
 	-I/share/apps/netcdf/3.6.3/intel/include 
 
-#	-I/home/sw77/QChem-Tinker/VMD-plugin 
+FFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report
 
-LIBS = 	-L . \
+LIBS = 	-L/share/apps/python/2.7.2/intel/lib -lpython2.7 \
 	-L/share/apps/netcdf/3.6.3/intel/lib -lnetcdf_c++ -lnetcdf \
 	-L/share/apps/intel/Compiler/11.1/046/lib/intel64 \
         -lifcore -lifport -lstdc++
 
-EXENAME = QMMMMDtnc2.so
+EXENAME = $(O)/QMMMMDtnc2.so
 Link = $(LD) $(CFLAGS)
 
 OBJS =  $(O)/extension.o  $(O)/readtnc2.o \
@@ -35,28 +42,20 @@ $(EXENAME) : $(OBJS)
 	chmod -x $(EXENAME) 
 
 $(O)/%.o: %.c
-	cd $(O) ; $(CC)  $(CFLAGS) -c $<
+	cd $(O) ; $(CC)  $(CFLAGS) -c $(SRC)/$<
 $(O)/%.o: %.cc
-	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+	cd $(O) ; $(CCC) $(CFLAGS) -c $(SRC)/$<
 $(O)/%.o: %.cpp
-	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+	cd $(O) ; $(CCC) $(CFLAGS) -c $(SRC)/$<
 $(O)/%.o: %.C
-	cd $(O) ; $(CCC) $(CFLAGS) -c $<
+	cd $(O) ; $(CCC) $(CFLAGS) -c $(SRC)/$<
 $(O)/%.o: %.F
-	cd $(O) ; $(F77) $(FFLAGS) -c $<
+	cd $(O) ; $(F77) $(FFLAGS) -c $(SRC)/$<
 $(O)/%.o: %.for
-	cd $(O) ; $(F77) $(FFLAGS) -c $<
+	cd $(O) ; $(F77) $(FFLAGS) -c $(SRC)/$<
 
 clean:
-	rm -f core *.o *.so
-dat: 
-	rm -f *.dat
-backup:
-	rm -f *~
-clobber:
-	rm -f $(EXENAME).exe
-cleanall:
-	rm -f *.o *.dat *~ *.exe *.exe.* $(EXENAME) *.pyc depend
+	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a
 
 depend :
 	$(CCC) $(CFLAGS) -MM *.[cC] | perl dep.pl > $@
@@ -64,4 +63,4 @@ depend :
 
 .PRECIOUS: %_wrap.C %.C %.c %.f %.h $(O)/%.o
 
-include depend
+#include depend	

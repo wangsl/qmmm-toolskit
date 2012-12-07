@@ -1,4 +1,6 @@
-#!/usr/bin/python
+#!/bin/env python
+
+# $Id$
 
 from sys import argv, exit, stdout
 from utility import check_file_exists

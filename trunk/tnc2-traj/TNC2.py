@@ -1,5 +1,7 @@
 #!/bin/env python
 
+# $Id$
+
 from sys import stdout
 from utility import check_file_exists
 from QMMMMDtnc2 import *
