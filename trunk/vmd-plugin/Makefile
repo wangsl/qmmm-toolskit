@@ -1,5 +1,5 @@
 
-# $Id: Makefile,v 1.1 2005/07/18 20:32:28 wangsl Exp wangsl $
+# $Id$
 
 .DEFAULT: .F .for .c .C .cpp .cc .f90
 .SUFFIXES: .F .for .c .C .cpp .cc .f90
@@ -12,18 +12,18 @@ F77 = ifort
 CC = icc
 CCC = icpc
 
-CFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report \
+CFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report -Wno-deprecated \
 	-I/home/sw77/QChem4.0-Tinker4.2/ext-libs/include 
 
 FFLAGS = -O3 -fPIC -unroll -ip -axOP -xOP -openmp -vec-report -par-report -openmp-report 
 
 Link = $(CCC) $(CFLAGS) -shared-intel
 
-LIBS = -L/home/sw77/local/GNU/NetCDF-3.6.3/lib \
+LIBS = -L/home/sw77/QChem4.0-Tinker4.2/ext-libs/lib \
 	-lnetcdf_c++ -lnetcdf \
 	-lstdc++ 
 
-EXENAME = t1
+EXENAME = $(O)/t1
 
 SUBOBJS = $(O)/die.o  $(O)/out.o  $(O)/indent.o  $(O)/NetCDF.o \
         $(O)/NetCDFio.o \
@@ -33,8 +33,8 @@ SUBOBJS = $(O)/die.o  $(O)/out.o  $(O)/indent.o  $(O)/NetCDF.o \
 OBJS =  $(O)/main.o  $(SUBOBJS)
 
 $(EXENAME) : $(OBJS) 
-	ar -r libmyNetCDF.a $(SUBOBJS)
-	 ranlib libmyNetCDF.a
+	ar -r $(O)/libmyNetCDF.a $(SUBOBJS)
+	ranlib $(O)/libmyNetCDF.a
 	$(Link) -o $(EXENAME) $(OBJS) $(LIBS)
 
 $(O)/%.o: %.c
@@ -52,13 +52,12 @@ $(O)/%.o: %.for
 $(O)/%.o: %.f90
 	cd $(O) ; $(F90) $(FFLAGS) -c $<
 
-cleanall:
-	rm -f *.o *~ $(EXENAME) *.il *.mod depend *.a
+clean:
+	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a
 
 depend :
 	$(CCC) $(CFLAGS) -MM *.[cC] | perl dep.pl > $@
 
-
 .PRECIOUS: %io.C %.C %.c %.f %.h $(O)/%.o
 
-#include depend
+
