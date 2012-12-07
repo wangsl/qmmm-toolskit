@@ -37,7 +37,7 @@ OBJS =  $(O)/extension.o  $(O)/readtnc2.o \
 	$(O)/ReadNetCDFtraj.o $(O)/ReadNetCDFtrajio.o \
 	$(O)/utilC01.o
 
-$(EXENAME) : $(OBJS) 
+$(EXENAME) : $(O) $(OBJS)
 	$(Link) -shared -o $(EXENAME) $(OBJS) $(LIBS)  
 	chmod -x $(EXENAME) 
 
@@ -53,6 +53,9 @@ $(O)/%.o: %.F
 	cd $(O) ; $(F77) $(FFLAGS) -c $(SRC)/$<
 $(O)/%.o: %.for
 	cd $(O) ; $(F77) $(FFLAGS) -c $(SRC)/$<
+
+$(O) :
+	mkdir -p $(O)
 
 clean:
 	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a *.pyc
