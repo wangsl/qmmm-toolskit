@@ -1,4 +1,6 @@
 
+/* $Id$ */
+
 /*
   QChem-Tinker NetCDF file .tnc2, which means Tinker NetCDF file
   by Shenglong Wang
