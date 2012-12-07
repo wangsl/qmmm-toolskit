@@ -55,7 +55,7 @@ $(O)/%.o: %.for
 	cd $(O) ; $(F77) $(FFLAGS) -c $(SRC)/$<
 
 clean:
-	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a
+	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a *.pyc
 
 depend :
 	$(CCC) $(CFLAGS) -MM *.[cC] | perl dep.pl > $@
