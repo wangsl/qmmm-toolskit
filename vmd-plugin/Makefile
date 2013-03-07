@@ -23,7 +23,9 @@ LIBS = -L/home/sw77/QChem4.0-Tinker4.2/ext-libs/lib \
 	-lnetcdf_c++ -lnetcdf \
 	-lstdc++ 
 
-EXENAME = $(O)/t1
+all: $(O)/t1 $(O)/TinkerNetCDFplugin.so  $(O)/TinkerNetCDF2plugin.so
+
+EXENAME = $(O)/t1 
 
 SUBOBJS = $(O)/die.o  $(O)/out.o  $(O)/indent.o  $(O)/NetCDF.o \
         $(O)/NetCDFio.o \
@@ -33,8 +35,6 @@ SUBOBJS = $(O)/die.o  $(O)/out.o  $(O)/indent.o  $(O)/NetCDF.o \
 OBJS =  $(O)/main.o  $(SUBOBJS)
 
 $(EXENAME) : $(O) $(OBJS) 
-	ar -r $(O)/libmyNetCDF.a $(SUBOBJS)
-	ranlib $(O)/libmyNetCDF.a
 	$(Link) -o $(EXENAME) $(OBJS) $(LIBS)
 
 $(O)/%.o: %.c
@@ -54,6 +54,9 @@ $(O)/%.o: %.f90
 
 $(O) :
 	mkdir -p $(O)
+
+$(O)/%.so : %.C $(SUBOBJS) 
+	cd $(O) ; $(Link) -shared -o $@  $(SRC)/$< $(SUBOBJS) $(LIBS)
 
 clean:
 	rm -f $(O)/* *~ $(EXENAME) *.mod depend *.a
