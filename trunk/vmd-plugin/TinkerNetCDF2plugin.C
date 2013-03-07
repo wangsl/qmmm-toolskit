@@ -14,8 +14,9 @@ using namespace std;
 #include <cstdlib>
 #include <cstring>
 #include <ctype.h>
-#include "molfile_plugin.h"
 #include "ReadNetCDFtraj.h"
+
+#include "molfile_plugin.h"
 
 static inline void add_char_end(char *word, int len)
 {
