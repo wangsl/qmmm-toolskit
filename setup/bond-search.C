@@ -6,8 +6,9 @@
 #include <fstream>
 using namespace std;
 #include <cassert>
+#include <cstring>
 
-// The bond serach method is same as in VMD source code
+// The bond search method is same as in VMD source code
 
 #ifndef MAXNBONDS 
 #define MAXNBONDS 10
